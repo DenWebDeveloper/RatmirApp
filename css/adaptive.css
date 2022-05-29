@@ -561,6 +561,41 @@
         background-size: cover;
     }
 
+    .wrapper__window-error .window__error {
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+
+        width: 99%;
+        height: 99%;
+        transform: translate(-50%, -50%);
+
+    
+        background: rgba(255, 255, 255, 0.509);
+    }
+
+    .wrapper__btn-exit .close {
+    
+        fill: rgb(0, 0, 0);
+    
+        animation: none;
+    
+    
+    }
+
+    .wrapper__btn-exit {
+
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        width: 40px;
+        height: 40px;
+
+        z-index: 1;
+    }
+
+
     .wrapper__social-icons {
 
         position: absolute;
@@ -711,6 +746,41 @@
         background-size: cover;
     }
 
+     
+    .wrapper__window-error .window__error {
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+
+        width: 99%;
+        height: 99%;
+        transform: translate(-50%, -50%);
+
+    
+        background: rgba(255, 255, 255, 0.509);
+    }
+
+    .wrapper__btn-exit .close {
+    
+        fill: rgb(0, 0, 0);
+    
+        animation: none;
+    
+    
+    }
+
+    .wrapper__btn-exit {
+
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        width: 40px;
+        height: 40px;
+
+        z-index: 1;
+    }
+
     .wrapper__description {
 
         top: 80%;
@@ -763,6 +833,65 @@
 
 }
 
+@media (max-width: 412px){
+
+    
+    .wrapper__window-error .window__error-title {
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%);
+    
+        font-size: 30px;
+        text-align: center;
+       
+        line-height: 35px;
+    }
+
+    .wrapper__window-error .window__error {
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+
+        width: 99%;
+        height: 99%;
+        transform: translate(-50%, -50%);
+
+    
+        background: rgba(255, 255, 255, 0.753);
+    }
+
+    .wrapper__btn-exit .close {
+
+        width: 40px;
+        height: 40px;
+    
+        transition: all .3s ease-in-out;
+    
+        fill: rgb(0, 0, 0);
+    
+        animation: none;
+
+        z-index: 1
+    
+    
+    }
+
+    .wrapper__btn-exit {
+
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        width: 40px;
+        height: 40px;
+
+        z-index: 11000;
+    }
+
+}
+
 @media (max-width: 360px){
 
     .section-1 {
@@ -772,6 +901,19 @@
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
+    }
+
+    .wrapper__window-error .window__error-title {
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%);
+    
+        font-size: 30px;
+        text-align: center;
+       
+        line-height: 35px;
     }
 
     .sec-2__title  {
@@ -827,6 +969,48 @@
 
 @media (max-width: 320px){
 
+    
+    .wrapper__window-error .window__error {
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+
+        width: 99%;
+        height: 99%;
+        transform: translate(-50%, -50%);
+
+    
+        background: #fff;
+    }
+
+    .wrapper__btn-exit .close {
+
+        width: 40px;
+        height: 40px;
+    
+        transition: all .3s ease-in-out;
+    
+        fill: #fff;
+    
+        animation: animateColor 3s infinite;
+    
+    
+    }
+
+    .wrapper__btn-exit {
+
+        position: absolute;
+        top: 15px;
+        right: -150px;
+        width: 40px;
+        height: 40px;
+
+        z-index: 11000;
+    }
+
+    
+
     .section-1 {
         height: 100vh;
         background: url(../images/mobile__version/1.jpg);
@@ -835,6 +1019,54 @@
         background-repeat: no-repeat;
         background-size: cover;
     }
+
+    .wrapper__window-error .window__error {
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+
+        width: 99%;
+        height: 99%;
+        transform: translate(-50%, -50%);
+
+    
+        background: rgba(255, 255, 255, 0.509);
+    }
+
+    .wrapper__btn-exit .close {
+    
+        fill: rgb(0, 0, 0);
+    
+        animation: none;
+    
+    
+    }
+
+    .wrapper__window-error .window__error-title {
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%);
+    
+        font-size: 30px;
+        text-align: center;
+       
+        line-height: 35px;
+    }
+
+    .wrapper__btn-exit {
+
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        width: 40px;
+        height: 40px;
+
+        z-index: 1;
+    }
+
 
     .main__title {
 
