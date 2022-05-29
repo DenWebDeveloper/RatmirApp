@@ -1,0 +1,39 @@
+
+/* Анимация для стрелки в главном меню header главного экрана  */
+/* 
+@keyframes move {
+    0%{
+    transform: translateX(0px);
+
+    }
+    50% {
+    transform: translateX(14px);
+
+
+    }
+    100% {
+        transform: translateX(0px);
+    }
+} */
+
+
+/* Анимация цвта для кнопки close в Window__error  */
+
+@keyframes animateColor {
+
+    0% {
+
+        fill: #fff;
+
+    }
+
+   50% {
+        fill: rgb(154, 229, 107);
+        
+    }
+
+   100% {
+        fill: #fff;
+        
+    }
+}

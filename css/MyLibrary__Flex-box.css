@@ -1,0 +1,62 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+}
+
+/* Display Flex ( Выравниваем элементы в одну строчку) */
+.flex {
+    display: flex;
+}
+
+/* Display Flex со значением flex-wrap ( Выравниваем элементы в одну строчку с возможностью перемещения элемента на следующую сточку) */
+.flex-wrap {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Display Flex ( Выравниваем элементы в одну колонку) */
+.flex-col{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.jc-start {
+    justify-content: flex-start;
+}
+
+
+.jc-center {
+    justify-content: center;
+}
+
+.jc-end {
+    justify-content: flex-end;
+}
+
+.jc-sb {
+    justify-content: space-between;
+}
+
+.jc-sa {
+    justify-content: space-around;
+}
+
+
+.ai-start {
+    align-items: flex-start;
+}
+
+.ai-center {
+    align-items: center;
+}
+
+
+.ai-end {
+    align-items: flex-end;
+}
