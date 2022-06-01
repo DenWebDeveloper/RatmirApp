@@ -4,7 +4,9 @@ window.onload = function () {
     const body = document.querySelector('body');
     const section1 = document.querySelector('.sec-1');
 
-    const section2 = document.querySelector('.sec-2');
+    const videoGallery = document.querySelector('.sec-2');
+
+    const mainPage = document.querySelector('.sec-1');
 
     const btnBurger = document.querySelector('.btn-burger');
     const btnClouse = document.querySelector('.btn-clouse');
@@ -20,6 +22,22 @@ window.onload = function () {
 
 
 
+    itemMobileMeu.forEach((item) => {
+
+        
+
+        item.addEventListener('click', (e)=> {
+           
+            body.classList = '';
+            burgerMenu.classList.remove('active');
+            btnBurger.classList.add('active');
+
+
+
+        });
+
+        
+    });
 
     socialLinksIcons.forEach((item) => {
 
@@ -66,7 +84,5 @@ window.onload = function () {
       
     });
 
-    console.dir(window);
-    
 
 };
