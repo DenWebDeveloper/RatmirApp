@@ -1058,6 +1058,12 @@
 
 @media (max-width: 412px){
 
+    .sec-1::before {
+
+        background: rgba(0,0,0,.5);
+     
+    }
+
     
     .wrapper__window-error .window__error-title {
 
@@ -1130,6 +1136,12 @@
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
+    }
+
+    .sec-1::before {
+
+        background: rgba(0,0,0,.5);
+     
     }
 
     .wrapper__window-error .window__error-title {

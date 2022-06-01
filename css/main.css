@@ -484,6 +484,7 @@
     display: block;
 
     overflow: hidden;
+
 }
 
 .wrapper__btn-exit {
@@ -821,6 +822,8 @@
 .sec-3 {
 
     width: 100%;
+    padding: 5px 15px;
+    padding-top: 0px; 
     
 }
 

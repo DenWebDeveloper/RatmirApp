@@ -19,6 +19,8 @@ window.onload = function () {
     const itemMobileMeu = document.querySelectorAll('.item__mobile-menu');
 
 
+
+
     socialLinksIcons.forEach((item) => {
 
         item.addEventListener('click', () => {
@@ -38,23 +40,33 @@ window.onload = function () {
 
     btnBurger.addEventListener('click', () => {
 
+        let pagePosition = window.scrollY;
+
         btnBurger.classList.remove('active');
         burgerMenu.classList.add('active');
         btnClouse.classList.add('active');
         body.classList.add('disabled');
+        body.dataset.position = pagePosition;
+        body.style.top = -pagePosition + 'px';
 
-
-        
     });
 
     btnClouse.addEventListener('click', () =>{
 
+
+        let pagePosition = parseInt(body.dataset.position, 10);
+        body.style.top = 'auto';
+
         btnClouse.classList.remove('active');
         burgerMenu.classList.remove('active');
         body.classList.remove('disabled');
+        window.scroll({top: pagePosition, left: 0});
+        body.removeAttribute('data-position');
         btnBurger.classList.add('active');
       
     });
+
+    console.dir(window);
     
 
 };
