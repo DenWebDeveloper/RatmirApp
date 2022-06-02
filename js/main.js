@@ -20,24 +20,41 @@ window.onload = function () {
 
     const itemMobileMeu = document.querySelectorAll('.item__mobile-menu');
 
+    const linkMobileMeu = document.querySelectorAll('.link__burger-menu');
 
 
-    itemMobileMeu.forEach((item) => {
 
-        
+    // Переключение активности у ссылок мобильного меню
 
-        item.addEventListener('click', (e)=> {
-           
+        linkMobileMeu.forEach((item) => {
+
+            item.addEventListener('click', (e)=> {
+
+            linkMobileMeu.forEach((item) =>  {
+
+                item.classList.remove('active');
+            });
+
+            itemMobileMeu.forEach((item) => {
+
+                item.classList.remove('active');
+            });
+
+            e.target.classList.add('active');
+
+
             body.classList = '';
+
             burgerMenu.classList.remove('active');
+
             btnBurger.classList.add('active');
-
-
 
         });
 
         
     });
+
+    // Установил окно предупреждения "Страница находится в разработке" по клику на социальную иконку
 
     socialLinksIcons.forEach((item) => {
 
@@ -55,6 +72,7 @@ window.onload = function () {
 
     });
 
+    // Расскрывает мобильное меню
 
     btnBurger.addEventListener('click', () => {
 
@@ -68,6 +86,9 @@ window.onload = function () {
         body.style.top = -pagePosition + 'px';
 
     });
+
+
+    // Закрывает мобильное меню
 
     btnClouse.addEventListener('click', () =>{
 

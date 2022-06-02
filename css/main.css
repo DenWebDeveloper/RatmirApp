@@ -216,13 +216,18 @@
 }
 
 .item__mobile-menu:hover .link__burger-menu:before {
-    opacity: 1;
 
+    opacity: 1;
 
 }
 
-.item__mobile-menu.active .link__burger-menu:before{
-    
+.item__mobile-menu.active .link__burger-menu:before {
+
+    opacity: 1;
+
+}
+
+.link__burger-menu.active.link__burger-menu:before{
 
     opacity: 1;
 
@@ -244,7 +249,9 @@
 
     overflow: hidden;
 }
-.link__burger-menu:before {
+
+
+.link__burger-menu::before {
 
     content: '';
 
