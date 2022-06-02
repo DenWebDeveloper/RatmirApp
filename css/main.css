@@ -3,9 +3,12 @@
 
 
 .section {
+    
     width: 100%;
 
     background: rgb(225, 224, 224);
+
+    scroll-behavior: smooth;
 
 }
 
