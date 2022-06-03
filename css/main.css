@@ -858,6 +858,26 @@
 }
 
 
+.sec__main-title-4 {
+
+    font-family: 'BoomBoom'; 
+
+    font-size: 40px;
+    letter-spacing: 8px;
+    
+    padding: 20px 15px;
+    text-align: center;
+
+}
+
+.wrapper__music-player {
+
+    background: grey;
+    width: 100%;
+    height: 500px;
+}
+
+
 
 
 

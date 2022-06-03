@@ -7,3 +7,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Beau+Rivage&family=Caveat:wght@400;500;600;700&family=Grape+Nuts&family=Montserrat:wght@400;500;600;700;900&family=Poppins:wght@100;200;300;400;600;700&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Beau+Rivage&family=Caveat:wght@400;500;600;700&family=Grape+Nuts&family=Montserrat:wght@400;500;600;700;900&family=Poppins:wght@100;200;300;400;600;700&display=swap');
+
+@font-face {
+	font-family: 'Christmas ScriptC'; 
+	src: url(../fonts/christmasscript/Christmas\ ScriptC.ttf); 
+}
+
+@font-face {
+	font-family: 'BoomBoom'; 
+	src: url(../fonts/boomboom/Boomboom.otf); 
+}

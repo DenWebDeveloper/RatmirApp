@@ -30,29 +30,27 @@ window.onload = function () {
 
             item.addEventListener('click', (e)=> {
 
-            linkMobileMeu.forEach((item) =>  {
+                linkMobileMeu.forEach((item) =>  {
 
-                item.classList.remove('active');
+                    item.classList.remove('active');
+                });
+
+                itemMobileMeu.forEach((item) => {
+
+                    item.classList.remove('active');
+                });
+
+                e.target.classList.add('active');
+
+
+                body.classList = '';
+
+                burgerMenu.classList.remove('active');
+
+                btnBurger.classList.add('active');
             });
-
-            itemMobileMeu.forEach((item) => {
-
-                item.classList.remove('active');
-            });
-
-            e.target.classList.add('active');
-
-
-            body.classList = '';
-
-            burgerMenu.classList.remove('active');
-
-            btnBurger.classList.add('active');
-
-        });
-
         
-    });
+        });
 
     // Установил окно предупреждения "Страница находится в разработке" по клику на социальную иконку
 
