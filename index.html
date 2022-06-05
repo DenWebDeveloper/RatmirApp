@@ -15,7 +15,7 @@
     <title>Ратмир и друзья</title>
 </head>
 <body>
-    <section class="section sec-1">
+    <section class="section sec-1 main-section">
 
         <div class="wrapper__window-error ">
 
@@ -33,14 +33,31 @@
             </div>
         </div>
 
+        <div class="wrapper__arrow-up ">
+            
+            <svg class="main__arrow-up" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                <defs><style>.cls-1{fill:none;}</style>
+            </defs>
+            <title/>
+            <g data-name="Layer 2" id="Layer_2">
+            <path d="M25,14a1,1,0,0,1-.71-.29L16,5.41l-8.29,8.3a1,1,0,0,1-1.42-1.42l9-9a1,1,0,0,1,1.42,0l9,9a1,1,0,0,1,0,1.42A1,1,0,0,1,25,14Z"/>
+            <path d="M16,29a1,1,0,0,1-1-1V4a1,1,0,0,1,2,0V28A1,1,0,0,1,16,29Z"/>
+            </g>
+            <g id="frame">
+            <rect class="cls-1" height="32" width="32"/>
+            </g>
+            </svg>
+
+        </div>
+
         <header class="header">
 
             <ul class="list__desctop-menu">
     
                 <li class="item__desctop-menu item__desctop-menu-active"><a href="#" class="link__desctop-menu link__desctop-menu-active">Главная</a></li>
                 <li class="item__desctop-menu"><a href="#video" class="link__desctop-menu">Видео</a></li>
-                <li class="item__desctop-menu"><a href="#" class="link__desctop-menu">Аудио</a></li>
-                <li class="item__desctop-menu"><a href="#photo" class="link__desctop-menu">Галерея</a></li>
+                <li class="item__desctop-menu"><a href="#audio" class="link__desctop-menu">Аудио</a></li>
+                <li class="item__desctop-menu"><a href="#gallery" class="link__desctop-menu">Галерея</a></li>
     
             </ul>
 
@@ -48,7 +65,7 @@
 
     
 
-        <div class="menu-burger">
+        <div class="menu-burger ">
 
             <div class="logo__mobile-menu">
 
@@ -73,11 +90,18 @@
 
             </div>      
 
-            <ul class="mobaile-menu">
-                <li class="item__mobile-menu home "><a href="#" class="link__burger-menu home active">home</a></li>
+            <!-- <ul class="mobaile-menu">
+                <li class="item__mobile-menu home "><a href="#home" class="link__burger-menu home active">home</a></li>
                 <li class="item__mobile-menu video"><a href="#video" class="link__burger-menu video">video</a></li>
                 <li class="item__mobile-menu photo"><a href="#photo" class="link__burger-menu photo">photo</a></li>
                 <li class="item__mobile-menu music"><a href="#" class="link__burger-menu music">music</a></li>
+            </ul> -->
+
+            <ul class="mobile-menu">
+                <li class="item__mobile-menu home  active">home</li>
+                <li class="item__mobile-menu video">video</li>
+                <!-- <li class="item__mobile-menu photo">photo</li>
+                <li class="item__mobile-menu music">music</li> -->
             </ul>
 
 
@@ -172,7 +196,7 @@
 
     <!-- SECTION VIDEO GALLERY -->
 
-    <section class="section  sec-2" id="video">
+    <section class="section  sec-2 section-video" id="video">
 
         <h2 class="sec__main-title">Video Gallery</h2>
 
@@ -180,11 +204,11 @@
 
             <div class="wrapper__section-video-ratmir">
 
-                <div class="wrapper__sec-2__title">
-                    <h2 class="sec-2__title ">Ратмир Александров и Друзья!</h2>
+                <div class="wrapper__section-video__title">
+                    <h2 class="section-video__title ">Ратмир Александров и Друзья!</h2>
                 </div>
                
-                <div class="wrapper__sec-2-video">
+                <div class="wrapper__section-video">
 
                     <div class="item-video">
 
@@ -197,6 +221,35 @@
                         <video src="./video/6.mp4" controls></video>
     
                     </div>
+
+                    <div class="item-video">
+
+                        <video src="./video/Ляпис - В платье белом _ Ратмир Александров _ Серж Борисов _ Александр Казлитин.mp4" controls ></video>
+    
+                    </div>
+
+                    <div class="item-video">
+
+                        <video src="./video/Нежная походка - Ратмир Александров _ Серж Борисов _ Александр Казлитин.mp4" controls ></video>
+    
+                    </div>
+
+
+                    <div class="item-video">
+
+                        <video src="./video/Ратмир Александров - Под шум и взрыв гранат..mp4" controls ></video>
+    
+                    </div>
+
+                    <div class="item-video">
+
+                        <video src="#" controls poster="./images/Заглушка__img.jpg"></video>
+
+                        <!-- <img src="./images/Заглушка__img.jpg" alt=""> -->
+    
+                    </div>
+
+                 
                 </div>
                 
             </div>
@@ -287,7 +340,7 @@
 
                             <h5 class="video__description">Ратмир, Казлитин и Серж</h5>
 
-                            <p class="video__text">Босиком по солнцу</p>
+                            <p class="video__text">Милые зеленые глаза</p>
                             
                         </div>
 
@@ -402,7 +455,7 @@
 
                             <h5 class="video__description">Ожидается</h5>
 
-                            <p class="video__text">Добавление песен</p>
+                            <p class="video__text">Добавление нового видео</p>
                             
                         </div>
 
@@ -422,7 +475,7 @@
 
     </section>
 
-    <!-- <section class="section sec-4">
+    <!-- <section class="section sec-4 section-photo-gallary">
         <div class="container container__sec-3">
             
             <h2 class="sec__main-title-4">Music player</h2>
@@ -434,7 +487,7 @@
         </div>
     </section> -->
 
-
+ 
     <!-- SECTION PHOTO GALLERY -->
     <!-- <section class="section sec-3" id="photo">
         <div class="container container__sec-3">
@@ -696,7 +749,7 @@
     <footer class="footer">
         <div class="container ">
 
-            <p class="footer__description">Site by Shabanov Denis </p>
+            <p class="footer__description">Web-site for Ратмир Александров.</p>
 
         </div>
     </footer>
