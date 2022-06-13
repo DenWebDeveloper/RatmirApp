@@ -1,6 +1,17 @@
 
 /* Ширина Экрана 1240px */
 
+@media (max-width: 1528px){
+
+    .section-photo {
+
+        display: none;
+    }
+
+
+}
+
+
 
 @media (max-width: 1240px){
 
