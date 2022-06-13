@@ -15,7 +15,7 @@
     <title>Ратмир и друзья</title>
 </head>
 <body>
-    <section class="section sec-1 main-section">
+    <section class="section sec-1 main-section" id="main-section">
 
         <div class="wrapper__window-error ">
 
@@ -34,30 +34,47 @@
         </div>
 
         <div class="wrapper__arrow-up ">
+
+            <a href="#main-section" class="arrow-up">
+
+                <svg class="main__arrow-up" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                width="306px" height="306px" viewBox="0 0 306 306" style="enable-background:new 0 0 306 306;" xml:space="preserve">
+                    <g>
+                        <g id="expand-more">
+                            <polygon points="270.3,58.65 153,175.95 35.7,58.65 0,94.35 153,247.35 306,94.35"/>
+                        </g>
+
+                    </g>
+                 </svg>
+            </a>
             
-            <svg class="main__arrow-up" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
-                <defs><style>.cls-1{fill:none;}</style>
-            </defs>
-            <title/>
-            <g data-name="Layer 2" id="Layer_2">
-            <path d="M25,14a1,1,0,0,1-.71-.29L16,5.41l-8.29,8.3a1,1,0,0,1-1.42-1.42l9-9a1,1,0,0,1,1.42,0l9,9a1,1,0,0,1,0,1.42A1,1,0,0,1,25,14Z"/>
-            <path d="M16,29a1,1,0,0,1-1-1V4a1,1,0,0,1,2,0V28A1,1,0,0,1,16,29Z"/>
-            </g>
-            <g id="frame">
-            <rect class="cls-1" height="32" width="32"/>
-            </g>
-            </svg>
 
         </div>
 
-        <header class="header">
+        <header class="header active">
 
             <ul class="list__desctop-menu">
     
-                <li class="item__desctop-menu item__desctop-menu-active"><a href="#" class="link__desctop-menu link__desctop-menu-active">Главная</a></li>
-                <li class="item__desctop-menu"><a href="#video" class="link__desctop-menu">Видео</a></li>
-                <li class="item__desctop-menu"><a href="#audio" class="link__desctop-menu">Аудио</a></li>
-                <li class="item__desctop-menu"><a href="#gallery" class="link__desctop-menu">Галерея</a></li>
+                <li class="item__desctop-menu main item__desctop-menu-active"><a href="#main-section" class="link__desctop-menu link__desctop-menu-active">Главная</a></li>
+                <li class="item__desctop-menu video"><a href="#video" class="link__desctop-menu">Видео</a></li>
+                <li class="item__desctop-menu gallary"><a href="#photo-gallary" class="link__desctop-menu">Галерея</a></li>
+                <li class="item__desctop-menu audio"><a href="#audio" class="link__desctop-menu">Аудио</a></li>
+    
+            </ul>
+
+        </header>
+
+        <header class="header-fixed">
+
+            <ul class="list__desctop-menu-fixed">
+    
+                <li class="item__desctop-menu-fixed main active"><a href="#main-section" class="link__desctop-menu-fixed ">Главная</a></li>
+
+                <li class="item__desctop-menu-fixed video"><a href="#video" class="link__desctop-menu-fixed ">Видео</a></li>
+
+                <li class="item__desctop-menu-fixed gallary"><a href="#photo-gallary" class="link__desctop-menu-fixed">Галерея</a></li>
+                
+                <li class="item__desctop-menu-fixed audio"><a href="#audio" class="link__desctop-menu-fixed">Аудио</a></li>
     
             </ul>
 
@@ -218,6 +235,12 @@
 
                     <div class="item-video">
 
+                        <video src="./video/11.mp4" controls></video>
+    
+                    </div>
+
+                    <div class="item-video">
+
                         <video src="./video/6.mp4" controls></video>
     
                     </div>
@@ -243,9 +266,9 @@
 
                     <div class="item-video">
 
-                        <video src="#" controls poster="./images/Заглушка__img.jpg"></video>
+                        <video src="#" controls ></video>
 
-                        <!-- <img src="./images/Заглушка__img.jpg" alt=""> -->
+                        <p class="video__sub-title">Ожидается добавление нового видео</p>
     
                     </div>
 
@@ -445,6 +468,29 @@
                 <div class="item__video-content">
                     <div class="wrapper__video">
                         <div class="bg__wrapper"></div>
+                       <video class="video__item" src="./video/Ты точно знаешь эту песню - Ратмир Александров _ Серж Борисов - Игрушки.mp4" controls></video>
+
+                    </div>
+
+                    <div class="wrapper__text">
+
+                        <div>
+
+                            <h5 class="video__description">Ратмир и Серж</h5>
+
+                            <p class="video__text">Игрушки</p>
+                            
+                        </div>
+
+                        
+                    </div>
+
+                   
+                </div>
+
+                <div class="item__video-content">
+                    <div class="wrapper__video">
+                        <div class="bg__wrapper"></div>
                        <video class="video__item" src="#" controls></video>
 
                     </div>
@@ -474,11 +520,11 @@
         </div>
 
     </section>
-
-    <!-- <section class="section sec-4 section-photo-gallary">
+<!-- 
+    <section class="section sec-4 section__music-player-">
         <div class="container container__sec-3">
             
-            <h2 class="sec__main-title-4">Music player</h2>
+            <h2 class="sec__main-title-4">Music Player</h2>
 
             <div class="wrapper__music-player">
 
@@ -489,258 +535,361 @@
 
  
     <!-- SECTION PHOTO GALLERY -->
-    <!-- <section class="section sec-3" id="photo">
-        <div class="container container__sec-3">
 
-            <h2 class="sec__main-title">Photo Gallery</h2>
+    <section class="section  sec-3 section-photo" id="photo-gallary">
+    <h2 class="sec__main-title section__photo-main-title">Photo Gallery</h2>
 
-            <div class="wraper__photo-items">
 
-            <div class="item__photo">
+        <div class="wrapper__popap-window-photo ">
+            <div class="wrapper__popap-window-for-img">
+                <img src="" alt="" class="popap-window">
+                <div class="popap__close-btn">&#10006</div>
+            </div>
+        </div>
 
-                <div class="wrapper__description-photo">
+        <div class="wrapper__blur-section-photo"></div>
 
-                    <p class="description__photo"></p>
-    
-                </div>
-    
-                <div class="wrapper__photo">
-                    <img src="./images/Заглушка__img.jpg" alt="">
-                </div>
+
+        <!-- <p class="sub-title">Ратмир Алесандров</p> -->
+
+        <div class="container container__section-photo">
+
+            <div class="wrapper__arrow wrap-arrow-1 active">
+                <svg  class="arrow-right " id="blue_copy" style="enable-background:new 0 0 100 100;"
+ version="1.1" viewBox="0 0 100 100" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <g id="Layer_8_copy_4_1_">
+ <path d="M41.762,27.26v8.294c0,0.571,0.305,1.1,0.8,1.385l20.212,11.669c1.066,0.616,1.066,2.155,0,2.771L42.562,63.048   c-0.495,0.286-0.8,0.814-0.8,1.385v8.294c0,1.231,1.333,2.001,2.399,1.385l39.375-22.733c1.066-0.616,1.066-2.155,0-2.771   L44.161,25.875C43.095,25.259,41.762,26.029,41.762,27.26z"/><path d="M83.537,48.608L44.161,25.875c-0.193-0.112-0.395-0.164-0.597-0.19l37.972,21.923c1.066,0.616,1.066,2.155,0,2.771   L42.161,73.112c-0.1,0.058-0.205,0.092-0.308,0.126c0.308,0.914,1.401,1.398,2.308,0.874l39.375-22.733   C84.603,50.763,84.603,49.224,83.537,48.608z"/><path d="M41.762,27.26v8.294c0,0.571,0.305,1.1,0.8,1.385l20.212,11.669   c1.066,0.616,1.066,2.155,0,2.771L42.562,63.048c-0.495,0.286-0.8,0.814-0.8,1.385v8.294c0,1.231,1.333,2.001,2.399,1.385   l39.375-22.733c1.066-0.616,1.066-2.155,0-2.771L44.161,25.875C43.095,25.259,41.762,26.029,41.762,27.26z" style="fill:none;stroke:#000000;stroke-miterlimit:10;"/><path d="M14.664,27.273v8.294c0,0.571,0.305,1.1,0.8,1.385l20.212,11.669c1.066,0.616,1.066,2.155,0,2.771L15.464,63.061   c-0.495,0.286-0.8,0.814-0.8,1.385v8.294c0,1.231,1.333,2.001,2.399,1.385l39.375-22.733c1.066-0.616,1.066-2.155,0-2.771   L17.063,25.888C15.997,25.272,14.664,26.042,14.664,27.273z"/>
+ <path d="M56.438,48.621L17.063,25.888c-0.193-0.112-0.395-0.164-0.597-0.19l37.972,21.923c1.066,0.616,1.066,2.155,0,2.771   L15.063,73.125c-0.1,0.058-0.205,0.092-0.308,0.126c0.308,0.914,1.401,1.398,2.308,0.874l39.375-22.733   C57.505,50.776,57.505,49.237,56.438,48.621z"/>
+ <path d="M14.664,27.273v8.294c0,0.571,0.305,1.1,0.8,1.385l20.212,11.669   c1.066,0.616,1.066,2.155,0,2.771L15.464,63.061c-0.495,0.286-0.8,0.814-0.8,1.385v8.294c0,1.231,1.333,2.001,2.399,1.385   l39.375-22.733c1.066-0.616,1.066-2.155,0-2.771L17.063,25.888C15.997,25.272,14.664,26.042,14.664,27.273z" style="fill:none;stroke:#000000;stroke-miterlimit:10;"/>
+ </g>
+ </svg>
+
 
             </div>
 
-            <div class="item__photo">
-
-                <div class="wrapper__description-photo">
-
-                    <p class="description__photo"></p>
-    
-                </div>
-    
-                <div class="wrapper__photo">
-                    <img src="./images/Заглушка__img.jpg" alt="">
-                </div>
-
+            <div class="wrapper__arrow wrap-arrow-2">
+                <svg  class="arrow-left" id="blue_copy" style="enable-background:new 0 0 100 100;"
+                version="1.1" viewBox="0 0 100 100" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <g id="Layer_8_copy_4_1_">
+                <path d="M41.762,27.26v8.294c0,0.571,0.305,1.1,0.8,1.385l20.212,11.669c1.066,0.616,1.066,2.155,0,2.771L42.562,63.048   c-0.495,0.286-0.8,0.814-0.8,1.385v8.294c0,1.231,1.333,2.001,2.399,1.385l39.375-22.733c1.066-0.616,1.066-2.155,0-2.771   L44.161,25.875C43.095,25.259,41.762,26.029,41.762,27.26z"/><path d="M83.537,48.608L44.161,25.875c-0.193-0.112-0.395-0.164-0.597-0.19l37.972,21.923c1.066,0.616,1.066,2.155,0,2.771   L42.161,73.112c-0.1,0.058-0.205,0.092-0.308,0.126c0.308,0.914,1.401,1.398,2.308,0.874l39.375-22.733   C84.603,50.763,84.603,49.224,83.537,48.608z"/><path d="M41.762,27.26v8.294c0,0.571,0.305,1.1,0.8,1.385l20.212,11.669   c1.066,0.616,1.066,2.155,0,2.771L42.562,63.048c-0.495,0.286-0.8,0.814-0.8,1.385v8.294c0,1.231,1.333,2.001,2.399,1.385   l39.375-22.733c1.066-0.616,1.066-2.155,0-2.771L44.161,25.875C43.095,25.259,41.762,26.029,41.762,27.26z" style="fill:none;stroke:#000000;stroke-miterlimit:10;"/><path d="M14.664,27.273v8.294c0,0.571,0.305,1.1,0.8,1.385l20.212,11.669c1.066,0.616,1.066,2.155,0,2.771L15.464,63.061   c-0.495,0.286-0.8,0.814-0.8,1.385v8.294c0,1.231,1.333,2.001,2.399,1.385l39.375-22.733c1.066-0.616,1.066-2.155,0-2.771   L17.063,25.888C15.997,25.272,14.664,26.042,14.664,27.273z"/>
+                <path d="M56.438,48.621L17.063,25.888c-0.193-0.112-0.395-0.164-0.597-0.19l37.972,21.923c1.066,0.616,1.066,2.155,0,2.771   L15.063,73.125c-0.1,0.058-0.205,0.092-0.308,0.126c0.308,0.914,1.401,1.398,2.308,0.874l39.375-22.733   C57.505,50.776,57.505,49.237,56.438,48.621z"/>
+                <path d="M14.664,27.273v8.294c0,0.571,0.305,1.1,0.8,1.385l20.212,11.669   c1.066,0.616,1.066,2.155,0,2.771L15.464,63.061c-0.495,0.286-0.8,0.814-0.8,1.385v8.294c0,1.231,1.333,2.001,2.399,1.385   l39.375-22.733c1.066-0.616,1.066-2.155,0-2.771L17.063,25.888C15.997,25.272,14.664,26.042,14.664,27.273z" style="fill:none;stroke:#000000;stroke-miterlimit:10;"/>
+                </g>
+                </svg>
             </div>
 
-            <div class="item__photo">
 
-                <div class="wrapper__description-photo">
+            <div class="wrapper__photo-items">
 
-                    <p class="description__photo"></p>
-    
-                </div>
-    
-                <div class="wrapper__photo">
-                    <img src="./images/Заглушка__img.jpg" alt="">
-                </div>
+                <div class="item__photo item__photo-1">
 
-            </div>
 
-            <div class="item__photo">
+                    <div class="wrapper__description-photo">
 
-                <div class="wrapper__description-photo">
+                        <p class="description__photo"></p>
+        
+                    </div>
+        
+                    <div class="wrapper__photo">
+                      
+                        <div class="item-photo-shadow"></div>
+                        <svg enable-background="new 0 0 32 32" id="Glyph" version="1.1" 
+                        viewBox="0 0 32 32" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" 
+                        xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <path d="M27.414,24.586l-5.077-5.077C23.386,17.928,24,16.035,24,14c0-5.514-4.486-10-10-10S4,8.486,4,14  s4.486,10,10,10c2.035,0,3.928-0.614,5.509-1.663l5.077,5.077c0.78,0.781,2.048,0.781,2.828,0  C28.195,26.633,28.195,25.367,27.414,24.586z M7,14c0-3.86,3.14-7,7-7s7,3.14,7,7s-3.14,7-7,7S7,17.86,7,14z" id="XMLID_227_"/><path d="M19,14c0,0.552-0.448,1-1,1h-3v3c0,0.552-0.448,1-1,1s-1-0.448-1-1v-3h-3c-0.552,0-1-0.448-1-1s0.448-1,1-1  h3v-3c0-0.552,0.448-1,1-1s1,0.448,1,1v3h3C18.552,13,19,13.448,19,14z" id="XMLID_230_"/></svg>
 
-                    <p class="description__photo"></p>
-    
-                </div>
-    
-                <div class="wrapper__photo">
-                    <img src="./images/Заглушка__img.jpg" alt="">
-                </div>
+                        <img src="./images/section-photo/01.jpg" alt="Фото-2">
+                    </div>
 
-            </div>
-
-            <div class="item__photo">
-
-                <div class="wrapper__description-photo">
-
-                    <p class="description__photo"></p>
-    
-                </div>
-    
-                <div class="wrapper__photo">
-                    <img src="./images/Заглушка__img.jpg" alt="">
                 </div>
 
-            </div>
+                <div class="item__photo item__photo-2 ">
 
-            <div class="item__photo">
+                    <div class="wrapper__description-photo">
 
-                <div class="wrapper__description-photo">
+                        <p class="description__photo"></p>
+        
+                    </div>
+        
+                    <div class="wrapper__photo">
+                       
+                        <div class="item-photo-shadow"></div>
+                        <svg enable-background="new 0 0 32 32" id="Glyph" version="1.1" 
+                        viewBox="0 0 32 32" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" 
+                        xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <path d="M27.414,24.586l-5.077-5.077C23.386,17.928,24,16.035,24,14c0-5.514-4.486-10-10-10S4,8.486,4,14  s4.486,10,10,10c2.035,0,3.928-0.614,5.509-1.663l5.077,5.077c0.78,0.781,2.048,0.781,2.828,0  C28.195,26.633,28.195,25.367,27.414,24.586z M7,14c0-3.86,3.14-7,7-7s7,3.14,7,7s-3.14,7-7,7S7,17.86,7,14z" id="XMLID_227_"/><path d="M19,14c0,0.552-0.448,1-1,1h-3v3c0,0.552-0.448,1-1,1s-1-0.448-1-1v-3h-3c-0.552,0-1-0.448-1-1s0.448-1,1-1  h3v-3c0-0.552,0.448-1,1-1s1,0.448,1,1v3h3C18.552,13,19,13.448,19,14z" id="XMLID_230_"/></svg>
 
-                    <p class="description__photo"></p>
-    
-                </div>
-    
-                <div class="wrapper__photo">
-                    <img src="./images/Заглушка__img.jpg" alt="">
-                </div>
+                        <img src="./images/section-photo/1.jpg" alt="Фото">
+                    </div>
 
-            </div>
-
-            <div class="item__photo">
-
-                <div class="wrapper__description-photo">
-
-                    <p class="description__photo"></p>
-    
-                </div>
-    
-                <div class="wrapper__photo">
-                    <img src="./images/Заглушка__img.jpg" alt="">
                 </div>
 
-            </div>
+                <div class="item__photo item__photo-3">
 
-            <div class="item__photo">
+                    <div class="wrapper__description-photo">
 
-                <div class="wrapper__description-photo">
+                        <p class="description__photo"></p>
+        
+                    </div>
+        
+                    <div class="wrapper__photo bg">
+                       
+                        <div class="item-photo-shadow"></div>
+                        <svg enable-background="new 0 0 32 32" id="Glyph" version="1.1" 
+                        viewBox="0 0 32 32" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" 
+                        xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <path d="M27.414,24.586l-5.077-5.077C23.386,17.928,24,16.035,24,14c0-5.514-4.486-10-10-10S4,8.486,4,14  s4.486,10,10,10c2.035,0,3.928-0.614,5.509-1.663l5.077,5.077c0.78,0.781,2.048,0.781,2.828,0  C28.195,26.633,28.195,25.367,27.414,24.586z M7,14c0-3.86,3.14-7,7-7s7,3.14,7,7s-3.14,7-7,7S7,17.86,7,14z" id="XMLID_227_"/><path d="M19,14c0,0.552-0.448,1-1,1h-3v3c0,0.552-0.448,1-1,1s-1-0.448-1-1v-3h-3c-0.552,0-1-0.448-1-1s0.448-1,1-1  h3v-3c0-0.552,0.448-1,1-1s1,0.448,1,1v3h3C18.552,13,19,13.448,19,14z" id="XMLID_230_"/></svg>
 
-                    <p class="description__photo"></p>
-    
-                </div>
-    
-                <div class="wrapper__photo">
-                    <img src="./images/Заглушка__img.jpg" alt="">
-                </div>
+                        <img src="./images/Заглушка__img.jpg" alt="Фото">
+                    </div>
 
-            </div>
-
-            <div class="item__photo">
-
-                <div class="wrapper__description-photo">
-
-                    <p class="description__photo"></p>
-    
-                </div>
-    
-                <div class="wrapper__photo">
-                    <img src="./images/Заглушка__img.jpg" alt="">
                 </div>
 
-            </div>
+                <div class="item__photo item__photo-4">
 
-            <div class="item__photo">
+                    <div class="wrapper__description-photo">
 
-                <div class="wrapper__description-photo">
+                        <p class="description__photo"></p>
+        
+                    </div>
+        
+                    <div class="wrapper__photo bg">
+                       
+                        <div class="item-photo-shadow"></div>
+                        <svg enable-background="new 0 0 32 32" id="Glyph" version="1.1" 
+                        viewBox="0 0 32 32" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" 
+                        xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <path d="M27.414,24.586l-5.077-5.077C23.386,17.928,24,16.035,24,14c0-5.514-4.486-10-10-10S4,8.486,4,14  s4.486,10,10,10c2.035,0,3.928-0.614,5.509-1.663l5.077,5.077c0.78,0.781,2.048,0.781,2.828,0  C28.195,26.633,28.195,25.367,27.414,24.586z M7,14c0-3.86,3.14-7,7-7s7,3.14,7,7s-3.14,7-7,7S7,17.86,7,14z" id="XMLID_227_"/><path d="M19,14c0,0.552-0.448,1-1,1h-3v3c0,0.552-0.448,1-1,1s-1-0.448-1-1v-3h-3c-0.552,0-1-0.448-1-1s0.448-1,1-1  h3v-3c0-0.552,0.448-1,1-1s1,0.448,1,1v3h3C18.552,13,19,13.448,19,14z" id="XMLID_230_"/></svg>
 
-                    <p class="description__photo"></p>
-    
-                </div>
-    
-                <div class="wrapper__photo">
-                    <img src="./images/Заглушка__img.jpg" alt="">
-                </div>
+                        <img src="./images/Заглушка__img.jpg" alt="Фото">
 
-            </div>
+                    </div>
 
-            <div class="item__photo">
-
-                <div class="wrapper__description-photo">
-
-                    <p class="description__photo"></p>
-    
-                </div>
-    
-                <div class="wrapper__photo">
-                    <img src="./images/Заглушка__img.jpg" alt="">
                 </div>
 
-            </div>
+                <div class="item__photo item__photo-5">
 
-            <div class="item__photo">
+                    <div class="wrapper__description-photo">
 
-                <div class="wrapper__description-photo">
+                        <p class="description__photo"></p>
+        
+                    </div>
+        
+                    <div class="wrapper__photo bg">
+                       
+                        <div class="item-photo-shadow"></div>
+                        <svg enable-background="new 0 0 32 32" id="Glyph" version="1.1" 
+                        viewBox="0 0 32 32" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" 
+                        xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <path d="M27.414,24.586l-5.077-5.077C23.386,17.928,24,16.035,24,14c0-5.514-4.486-10-10-10S4,8.486,4,14  s4.486,10,10,10c2.035,0,3.928-0.614,5.509-1.663l5.077,5.077c0.78,0.781,2.048,0.781,2.828,0  C28.195,26.633,28.195,25.367,27.414,24.586z M7,14c0-3.86,3.14-7,7-7s7,3.14,7,7s-3.14,7-7,7S7,17.86,7,14z" id="XMLID_227_"/><path d="M19,14c0,0.552-0.448,1-1,1h-3v3c0,0.552-0.448,1-1,1s-1-0.448-1-1v-3h-3c-0.552,0-1-0.448-1-1s0.448-1,1-1  h3v-3c0-0.552,0.448-1,1-1s1,0.448,1,1v3h3C18.552,13,19,13.448,19,14z" id="XMLID_230_"/></svg>
 
-                    <p class="description__photo"></p>
-    
-                </div>
-    
-                <div class="wrapper__photo">
-                    <img src="./images/Заглушка__img.jpg" alt="">
-                </div>
+                        <img src="./images/Заглушка__img.jpg" alt="Фото">
+                    </div>
 
-            </div>
-
-            <div class="item__photo">
-
-                <div class="wrapper__description-photo">
-
-                    <p class="description__photo"></p>
-    
-                </div>
-    
-                <div class="wrapper__photo">
-                    <img src="./images/Заглушка__img.jpg" alt="">
                 </div>
 
-            </div>
+                <div class="item__photo item__photo-6">
 
-            <div class="item__photo">
+                    <div class="wrapper__description-photo">
 
-                <div class="wrapper__description-photo">
+                        <p class="description__photo"></p>
+        
+                    </div>
+        
+                    <div class="wrapper__photo bg">
+                       
+                        <div class="item-photo-shadow"></div>
+                        <svg enable-background="new 0 0 32 32" id="Glyph" version="1.1" 
+                        viewBox="0 0 32 32" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" 
+                        xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <path d="M27.414,24.586l-5.077-5.077C23.386,17.928,24,16.035,24,14c0-5.514-4.486-10-10-10S4,8.486,4,14  s4.486,10,10,10c2.035,0,3.928-0.614,5.509-1.663l5.077,5.077c0.78,0.781,2.048,0.781,2.828,0  C28.195,26.633,28.195,25.367,27.414,24.586z M7,14c0-3.86,3.14-7,7-7s7,3.14,7,7s-3.14,7-7,7S7,17.86,7,14z" id="XMLID_227_"/><path d="M19,14c0,0.552-0.448,1-1,1h-3v3c0,0.552-0.448,1-1,1s-1-0.448-1-1v-3h-3c-0.552,0-1-0.448-1-1s0.448-1,1-1  h3v-3c0-0.552,0.448-1,1-1s1,0.448,1,1v3h3C18.552,13,19,13.448,19,14z" id="XMLID_230_"/></svg>
 
-                    <p class="description__photo"></p>
-    
-                </div>
-    
-                <div class="wrapper__photo">
-                    <img src="./images/Заглушка__img.jpg" alt="">
-                </div>
+                        <img src="./images/Заглушка__img.jpg" alt="Фото">
+                    </div>
 
-            </div>
-
-            <div class="item__photo">
-
-                <div class="wrapper__description-photo">
-
-                    <p class="description__photo"></p>
-    
-                </div>
-    
-                <div class="wrapper__photo">
-                    <img src="./images/Заглушка__img.jpg" alt="">
                 </div>
 
-            </div>
+                <div class="item__photo item__photo-7">
 
-            <div class="item__photo">
+                    <div class="wrapper__description-photo">
 
-                <div class="wrapper__description-photo">
+                        <p class="description__photo"></p>
+        
+                    </div>
+        
+                    <div class="wrapper__photo bg">
+                       
+                        <div class="item-photo-shadow"></div>
+                        <svg enable-background="new 0 0 32 32" id="Glyph" version="1.1" 
+                        viewBox="0 0 32 32" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" 
+                        xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <path d="M27.414,24.586l-5.077-5.077C23.386,17.928,24,16.035,24,14c0-5.514-4.486-10-10-10S4,8.486,4,14  s4.486,10,10,10c2.035,0,3.928-0.614,5.509-1.663l5.077,5.077c0.78,0.781,2.048,0.781,2.828,0  C28.195,26.633,28.195,25.367,27.414,24.586z M7,14c0-3.86,3.14-7,7-7s7,3.14,7,7s-3.14,7-7,7S7,17.86,7,14z" id="XMLID_227_"/><path d="M19,14c0,0.552-0.448,1-1,1h-3v3c0,0.552-0.448,1-1,1s-1-0.448-1-1v-3h-3c-0.552,0-1-0.448-1-1s0.448-1,1-1  h3v-3c0-0.552,0.448-1,1-1s1,0.448,1,1v3h3C18.552,13,19,13.448,19,14z" id="XMLID_230_"/></svg>
 
-                    <p class="description__photo"></p>
-    
-                </div>
-    
-                <div class="wrapper__photo">
-                    <img src="./images/Заглушка__img.jpg" alt="">
-                </div>
+                        <img src="./images/Заглушка__img.jpg" alt="Фото">
+                        
+                    </div>
 
-            </div>
-
-            <div class="item__photo">
-
-                <div class="wrapper__description-photo">
-
-                    <p class="description__photo"></p>
-    
-                </div>
-    
-                <div class="wrapper__photo">
-                    <img src="./images/Заглушка__img.jpg" alt="">
                 </div>
 
-            </div>
+                <div class="item__photo item__photo-9">
 
-            
+                    <div class="wrapper__description-photo">
+
+                        <p class="description__photo"></p>
+        
+                    </div>
+        
+                    <div class="wrapper__photo bg">
+                       
+                        <div class="item-photo-shadow"></div>
+                        <svg enable-background="new 0 0 32 32" id="Glyph" version="1.1" 
+                        viewBox="0 0 32 32" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" 
+                        xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <path d="M27.414,24.586l-5.077-5.077C23.386,17.928,24,16.035,24,14c0-5.514-4.486-10-10-10S4,8.486,4,14  s4.486,10,10,10c2.035,0,3.928-0.614,5.509-1.663l5.077,5.077c0.78,0.781,2.048,0.781,2.828,0  C28.195,26.633,28.195,25.367,27.414,24.586z M7,14c0-3.86,3.14-7,7-7s7,3.14,7,7s-3.14,7-7,7S7,17.86,7,14z" id="XMLID_227_"/><path d="M19,14c0,0.552-0.448,1-1,1h-3v3c0,0.552-0.448,1-1,1s-1-0.448-1-1v-3h-3c-0.552,0-1-0.448-1-1s0.448-1,1-1  h3v-3c0-0.552,0.448-1,1-1s1,0.448,1,1v3h3C18.552,13,19,13.448,19,14z" id="XMLID_230_"/></svg>
+
+                        <img src="./images/Заглушка__img.jpg" alt="Фото">
+                        
+                    </div>
+
+                </div>
+
+                <div class="item__photo item__photo-10">
+
+                    <div class="wrapper__description-photo">
+
+                        <p class="description__photo"></p>
+        
+                    </div>
+        
+                    <div class="wrapper__photo bg">
+                       
+                        <div class="item-photo-shadow"></div>
+                        <svg enable-background="new 0 0 32 32" id="Glyph" version="1.1" 
+                        viewBox="0 0 32 32" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" 
+                        xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <path d="M27.414,24.586l-5.077-5.077C23.386,17.928,24,16.035,24,14c0-5.514-4.486-10-10-10S4,8.486,4,14  s4.486,10,10,10c2.035,0,3.928-0.614,5.509-1.663l5.077,5.077c0.78,0.781,2.048,0.781,2.828,0  C28.195,26.633,28.195,25.367,27.414,24.586z M7,14c0-3.86,3.14-7,7-7s7,3.14,7,7s-3.14,7-7,7S7,17.86,7,14z" id="XMLID_227_"/><path d="M19,14c0,0.552-0.448,1-1,1h-3v3c0,0.552-0.448,1-1,1s-1-0.448-1-1v-3h-3c-0.552,0-1-0.448-1-1s0.448-1,1-1  h3v-3c0-0.552,0.448-1,1-1s1,0.448,1,1v3h3C18.552,13,19,13.448,19,14z" id="XMLID_230_"/></svg>
+
+                        <img src="./images/Заглушка__img.jpg" alt="Фото">
+                        
+                    </div>
+
+                </div>
+
+                <div class="item__photo item__photo-11">
+
+                    <div class="wrapper__description-photo">
+
+                        <p class="description__photo"></p>
+        
+                    </div>
+        
+                    <div class="wrapper__photo bg">
+                       
+                        <div class="item-photo-shadow"></div>
+                        <svg enable-background="new 0 0 32 32" id="Glyph" version="1.1" 
+                        viewBox="0 0 32 32" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" 
+                        xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <path d="M27.414,24.586l-5.077-5.077C23.386,17.928,24,16.035,24,14c0-5.514-4.486-10-10-10S4,8.486,4,14  s4.486,10,10,10c2.035,0,3.928-0.614,5.509-1.663l5.077,5.077c0.78,0.781,2.048,0.781,2.828,0  C28.195,26.633,28.195,25.367,27.414,24.586z M7,14c0-3.86,3.14-7,7-7s7,3.14,7,7s-3.14,7-7,7S7,17.86,7,14z" id="XMLID_227_"/><path d="M19,14c0,0.552-0.448,1-1,1h-3v3c0,0.552-0.448,1-1,1s-1-0.448-1-1v-3h-3c-0.552,0-1-0.448-1-1s0.448-1,1-1  h3v-3c0-0.552,0.448-1,1-1s1,0.448,1,1v3h3C18.552,13,19,13.448,19,14z" id="XMLID_230_"/></svg>
+
+                        <img src="./images/Заглушка__img.jpg" alt="Фото">
+                        
+                    </div>
+
+                </div>
+
+                <div class="item__photo item__photo-12">
+
+                    <div class="wrapper__description-photo">
+
+                        <p class="description__photo"></p>
+        
+                    </div>
+        
+                    <div class="wrapper__photo bg">
+                       
+                        <div class="item-photo-shadow"></div>
+                        <svg enable-background="new 0 0 32 32" id="Glyph" version="1.1" 
+                        viewBox="0 0 32 32" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" 
+                        xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <path d="M27.414,24.586l-5.077-5.077C23.386,17.928,24,16.035,24,14c0-5.514-4.486-10-10-10S4,8.486,4,14  s4.486,10,10,10c2.035,0,3.928-0.614,5.509-1.663l5.077,5.077c0.78,0.781,2.048,0.781,2.828,0  C28.195,26.633,28.195,25.367,27.414,24.586z M7,14c0-3.86,3.14-7,7-7s7,3.14,7,7s-3.14,7-7,7S7,17.86,7,14z" id="XMLID_227_"/><path d="M19,14c0,0.552-0.448,1-1,1h-3v3c0,0.552-0.448,1-1,1s-1-0.448-1-1v-3h-3c-0.552,0-1-0.448-1-1s0.448-1,1-1  h3v-3c0-0.552,0.448-1,1-1s1,0.448,1,1v3h3C18.552,13,19,13.448,19,14z" id="XMLID_230_"/></svg>
+
+                        <img src="./images/Заглушка__img.jpg" alt="Фото">
+                        
+                    </div>
+
+                </div>
+
+                <!-- <div class="item__photo item__photo-13">
+
+                    <div class="wrapper__description-photo">
+
+                        <p class="description__photo"></p>
+        
+                    </div>
+        
+                    <div class="wrapper__photo bg">
+                       
+                        <div class="item-photo-shadow"></div>
+                        <svg enable-background="new 0 0 32 32" id="Glyph" version="1.1" 
+                        viewBox="0 0 32 32" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" 
+                        xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <path d="M27.414,24.586l-5.077-5.077C23.386,17.928,24,16.035,24,14c0-5.514-4.486-10-10-10S4,8.486,4,14  s4.486,10,10,10c2.035,0,3.928-0.614,5.509-1.663l5.077,5.077c0.78,0.781,2.048,0.781,2.828,0  C28.195,26.633,28.195,25.367,27.414,24.586z M7,14c0-3.86,3.14-7,7-7s7,3.14,7,7s-3.14,7-7,7S7,17.86,7,14z" id="XMLID_227_"/><path d="M19,14c0,0.552-0.448,1-1,1h-3v3c0,0.552-0.448,1-1,1s-1-0.448-1-1v-3h-3c-0.552,0-1-0.448-1-1s0.448-1,1-1  h3v-3c0-0.552,0.448-1,1-1s1,0.448,1,1v3h3C18.552,13,19,13.448,19,14z" id="XMLID_230_"/></svg>
+
+                        <img src="./images/Заглушка__img.jpg" alt="Фото">
+                        
+                    </div>
+
+                </div> -->
+
+                <!-- <div class="item__photo item__photo-14">
+
+                    <div class="wrapper__description-photo">
+
+                        <p class="description__photo"></p>
+        
+                    </div>
+        
+                    <div class="wrapper__photo bg">
+                       
+                        <div class="item-photo-shadow"></div>
+                        <svg enable-background="new 0 0 32 32" id="Glyph" version="1.1" 
+                        viewBox="0 0 32 32" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" 
+                        xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <path d="M27.414,24.586l-5.077-5.077C23.386,17.928,24,16.035,24,14c0-5.514-4.486-10-10-10S4,8.486,4,14  s4.486,10,10,10c2.035,0,3.928-0.614,5.509-1.663l5.077,5.077c0.78,0.781,2.048,0.781,2.828,0  C28.195,26.633,28.195,25.367,27.414,24.586z M7,14c0-3.86,3.14-7,7-7s7,3.14,7,7s-3.14,7-7,7S7,17.86,7,14z" id="XMLID_227_"/><path d="M19,14c0,0.552-0.448,1-1,1h-3v3c0,0.552-0.448,1-1,1s-1-0.448-1-1v-3h-3c-0.552,0-1-0.448-1-1s0.448-1,1-1  h3v-3c0-0.552,0.448-1,1-1s1,0.448,1,1v3h3C18.552,13,19,13.448,19,14z" id="XMLID_230_"/></svg>
+
+                        <img src="./images/Заглушка__img.jpg" alt="Фото">
+                        
+                    </div>
+
+                </div> -->
+<!-- 
+                <div class="item__photo item__photo-15">
+
+                    <div class="wrapper__description-photo">
+
+                        <p class="description__photo"></p>
+        
+                    </div>
+        
+                    <div class="wrapper__photo bg">
+                       
+                        <div class="item-photo-shadow"></div>
+                        <svg enable-background="new 0 0 32 32" id="Glyph" version="1.1" 
+                        viewBox="0 0 32 32" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" 
+                        xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <path d="M27.414,24.586l-5.077-5.077C23.386,17.928,24,16.035,24,14c0-5.514-4.486-10-10-10S4,8.486,4,14  s4.486,10,10,10c2.035,0,3.928-0.614,5.509-1.663l5.077,5.077c0.78,0.781,2.048,0.781,2.828,0  C28.195,26.633,28.195,25.367,27.414,24.586z M7,14c0-3.86,3.14-7,7-7s7,3.14,7,7s-3.14,7-7,7S7,17.86,7,14z" id="XMLID_227_"/><path d="M19,14c0,0.552-0.448,1-1,1h-3v3c0,0.552-0.448,1-1,1s-1-0.448-1-1v-3h-3c-0.552,0-1-0.448-1-1s0.448-1,1-1  h3v-3c0-0.552,0.448-1,1-1s1,0.448,1,1v3h3C18.552,13,19,13.448,19,14z" id="XMLID_230_"/></svg>
+
+                        <img src="./images/Заглушка__img.jpg" alt="Фото">
+                        
+                    </div>
+
+                </div> -->
 
 
             </div>
 
         </div>
-    </section> -->
+    </section>
 
 
 

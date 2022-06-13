@@ -4,6 +4,10 @@
 
 @media (max-width: 1240px){
 
+    .header-fixed{
+        display: none;
+    }
+
     .main-section {
         width: 100%;
         background: url(../images/mobile__version/3.jpg);
@@ -182,6 +186,11 @@
     
         grid-gap: 20px;
     }
+
+    .container__section-photo {
+
+        display: none;
+    }
       
 }
 
@@ -310,6 +319,9 @@
 
         background: rgba(0,0,0,.9);
 
+    }
+    .wrapper__photo-items {
+        display: none;
     }
 
 }

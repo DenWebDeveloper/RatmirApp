@@ -3,6 +3,14 @@ window.onload = function () {
     // Находим элементы на странице сайта
     const body = document.querySelector('body');
 
+    const header = document.querySelector('.header');
+
+    const headerFixed = document.querySelector('.header-fixed');
+
+
+
+    const mainBtnUp = document.querySelector('.wrapper__arrow-up');
+
     const mainArrowUp = document.querySelector('.wrapper__arrow-up');
 
     const sectionMain = document.querySelector('.main-section');
@@ -11,9 +19,12 @@ window.onload = function () {
 
     const sectionPhotoGallery = document.querySelector('.section-photo-gallary');
 
-    const videoGallery = document.querySelector('.section-video');
+    // const videoGallery = document.querySelector('.section-video');
 
-    // const mainPage = document.querySelector('.sec-1');
+    const itemDesctopMenuFixed = document.querySelectorAll('.list__desctop-menu-fixed li');
+
+    const linkDesctopMenuFixed = document.querySelectorAll('.list__desctop-menu-fixed li a');
+
 
     const btnBurger = document.querySelector('.btn-burger');
 
@@ -32,6 +43,39 @@ window.onload = function () {
     const linkMobileMeu = document.querySelectorAll('.link__burger-menu');
 
     const anchors = document.querySelectorAll('a[href*="#"]');
+
+    const popapWindow = document.querySelector('.wrapper__popap-window-photo');  // Поолучил Попап Окно
+
+    const popapImg = document.querySelector('.wrapper__popap-window-photo img'); // Получил Попап Картинку
+
+    const popapCloseBtn = document.querySelector('.popap__close-btn');  // Получил кнопку закрытия Попап Окна
+
+    const popapActiveBtn = document.querySelectorAll('.wrapper__photo svg'); // Получил Кнопку лупу для активации Попап Окна
+
+    console.log(popapActiveBtn);
+
+
+  
+
+
+    //Активирую Попап Окно 
+
+    popapActiveBtn.forEach((item) => {
+
+        item.addEventListener('click', (e) => {
+
+
+            popapWindow.classList.add('active');
+
+
+        });
+    });
+
+    popapCloseBtn.addEventListener('click', () => {
+        popapWindow.classList.remove('active');
+
+    });
+
 
 
     // Плавная прокрутка к конкретной секции по клику на пункт меню.
@@ -100,15 +144,29 @@ window.onload = function () {
 
     });
 
-    // disabled();
 
+
+
+
+    window.addEventListener('click', (e) => {
+
+        console.log(e.target);
+    });
     
 
     // Акивация кнопки на вверх
 
     window.addEventListener('scroll', () => {
+
+        // console.log(window.scrollY);
+        // console.log(sectionMain.clientHeight);
+
         
-        if(window.scrollY > sectionMain.clientHeight) {
+        if(window.scrollY > sectionMain.clientHeight - 10) {
+
+            header.classList.remove('active');
+
+            headerFixed.classList.add('active');
 
             mainArrowUp.classList.add('active');
             
@@ -117,6 +175,8 @@ window.onload = function () {
 
                 itemMobileMeu[1].classList.add('active');
             }
+
+        
         }
 
         if(window.scrollY < 500 ){
@@ -124,12 +184,19 @@ window.onload = function () {
             mainArrowUp.classList.remove('active');
 
         }
+
+        if(window.scrollY < sectionMain.clientHeight ) {
+
+            headerFixed.classList.remove('active');
+
+            header.classList.add('active');
+        }
         
         if (window.scrollY == 0) {
 
             itemMobileMeu.forEach((element) => {
                 
-                console.log(element);
+                
 
                 element.classList.remove('active');
 
@@ -139,6 +206,37 @@ window.onload = function () {
                 }
                 
             });
+
+            headerFixed.classList.remove('active');
+
+            header.classList.add('active');
+        }
+
+        if(window.scrollY > sectionVideo.clientHeight) {
+
+            itemDesctopMenuFixed.forEach((item) => {
+
+
+                item.classList.remove('active');
+
+                itemDesctopMenuFixed.forEach((elem) => {
+
+                    if(elem.className == 'gallary'){
+                       
+                        
+                        console.log("dfdfdfdfdfd");
+                       
+                    }
+                    
+                    
+                
+                });
+
+
+                
+            });
+
+           
         }
     });
 
@@ -243,6 +341,12 @@ window.onload = function () {
         btnBurger.classList.add('active');
 
     });
+
+    // mainBtnUp.addEventListener('click', () => {
+
+    //     window.scrollTo(0, 0);
+       
+    // });
 
 
 };
