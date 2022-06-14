@@ -1,13 +1,14 @@
+
+'use strict';
+
 window.onload = function () {
 
-    // Находим элементы на странице сайта
+
     const body = document.querySelector('body');
 
     const header = document.querySelector('.header');
 
     const headerFixed = document.querySelector('.header-fixed');
-
-
 
     const mainBtnUp = document.querySelector('.wrapper__arrow-up');
 
@@ -19,12 +20,9 @@ window.onload = function () {
 
     const sectionPhotoGallery = document.querySelector('.section-photo-gallary');
 
-    // const videoGallery = document.querySelector('.section-video');
-
     const itemDesctopMenuFixed = document.querySelectorAll('.list__desctop-menu-fixed li');
 
     const linkDesctopMenuFixed = document.querySelectorAll('.list__desctop-menu-fixed li a');
-
 
     const btnBurger = document.querySelector('.btn-burger');
 
@@ -42,20 +40,15 @@ window.onload = function () {
 
     const linkMobileMeu = document.querySelectorAll('.link__burger-menu');
 
-    const anchors = document.querySelectorAll('a[href*="#"]');
+    const anchors = document.querySelectorAll('a[href*="#"]');  // Находим все ссылки с аттрибутом href="#".
 
-    const popapWindow = document.querySelector('.wrapper__popap-window-photo');  // Поолучил Попап Окно
+    const popapWindow = document.querySelector('.wrapper__popap-window-photo');  // Поолучил Попап Окно.
 
-    const popapImg = document.querySelector('.wrapper__popap-window-photo img'); // Получил Попап Картинку
+    const popapImg = document.querySelector('.wrapper__popap-window-photo img'); // Получил Попап Картинку.
 
-    const popapCloseBtn = document.querySelector('.popap__close-btn');  // Получил кнопку закрытия Попап Окна
+    const popapCloseBtn = document.querySelector('.popap__close-btn');  // Получил кнопку закрытия Попап Окна.
 
-    const popapActiveBtn = document.querySelectorAll('.wrapper__photo svg'); // Получил Кнопку лупу для активации Попап Окна
-
-    console.log(popapActiveBtn);
-
-
-  
+    const popapActiveBtn = document.querySelectorAll('.wrapper__photo svg'); // Получил Кнопку лупу для активации Попап Окна.
 
 
     //Активирую Попап Окно 
@@ -158,10 +151,6 @@ window.onload = function () {
 
     window.addEventListener('scroll', () => {
 
-        // console.log(window.scrollY);
-        // console.log(sectionMain.clientHeight);
-
-        
         if(window.scrollY > sectionMain.clientHeight - 10) {
 
             header.classList.remove('active');
