@@ -1,46 +1,66 @@
 
 'use strict';
 
-window.onload = function () {
+window.onload = function(){
 
 
-    const body = document.querySelector('body');
+    const body = document.querySelector('body');  // Body
 
-    const header = document.querySelector('.header');
 
-    const headerFixed = document.querySelector('.header-fixed');
+    const header = document.querySelector('.header');  // Header
 
-    const mainBtnUp = document.querySelector('.wrapper__arrow-up');
 
-    const mainArrowUp = document.querySelector('.wrapper__arrow-up');
+    const headerFixed = document.querySelector('.header-fixed');  // Header-fixed
 
-    const sectionMain = document.querySelector('.main-section');
 
-    const sectionVideo = document.querySelector('.section-video');
+    const itemDesctopMenuFixed = document.querySelectorAll('.list__desctop-menu-fixed li');  // Элемен меню Фиксированного Меню
 
-    const sectionPhotoGallery = document.querySelector('.section-photo-gallary');
+    const linkDesctopMenuFixed = document.querySelectorAll('.list__desctop-menu-fixed li a'); // Ссылка элемента Фиксированного Меню
 
-    const itemDesctopMenuFixed = document.querySelectorAll('.list__desctop-menu-fixed li');
 
-    const linkDesctopMenuFixed = document.querySelectorAll('.list__desctop-menu-fixed li a');
 
-    const btnBurger = document.querySelector('.btn-burger');
+    const sectionMain = document.querySelector('.main-section'); // Главная секция сайта
 
-    const btnClouse = document.querySelector('.btn-clouse');
+    const itemMainMenu = document.querySelectorAll('.item__desctop-menu');  // Элементы Меню Главного Экран
 
-    const burgerMenu = document.querySelector('.menu-burger');
+    const linkMainMenu = document.querySelectorAll('.link__desctop-menu');  // Ссылки Элементов Меню Главного Экран
 
-    const windowError = document.querySelector('.wrapper__window-error ');
+
+    const socialLinksIcons = document.querySelectorAll(".item__social-icon "); // Социальные иконки на Главном Экране
+
+    const itemMobileMeu = document.querySelectorAll('.item__mobile-menu');  // Элементы Мобильной Меню
+
+    const linkMobileMeu = document.querySelectorAll('.link__burger-menu'); // Ссылки Элементов Мобильного меню
+
+    const btnBurger = document.querySelector('.btn-burger');  // Кнопка Бургера
+
+    const btnClouse = document.querySelector('.btn-clouse'); // Кнопа Закрыть Бургер
+
+
+
+    const sectionVideo = document.querySelector('.section-video');  // Секция Видео галереи
+
+    const sectionPhotoGallery = document.querySelector('.section-photo');  // Cекция Фото галереи
+
+
+
+
+
+    const mainArrowUp = document.querySelector('.wrapper__arrow-up');  // Кнопка ВВЕРХ, при нажатии возвращаят на главное окно сайта.
+
+
+    const burgerMenu = document.querySelector('.menu-burger'); 
+
+    const windowError = document.querySelector('.wrapper__window-error '); /// Окно ошибки
 
     const windowBtnClose = document.querySelector('.wrapper__btn-exit');
 
-    const socialLinksIcons = document.querySelectorAll(".item__social-icon ");
 
-    const itemMobileMeu = document.querySelectorAll('.item__mobile-menu');
-
-    const linkMobileMeu = document.querySelectorAll('.link__burger-menu');
 
     const anchors = document.querySelectorAll('a[href*="#"]');  // Находим все ссылки с аттрибутом href="#".
+
+
+    // Попап Окно
 
     const popapWindow = document.querySelector('.wrapper__popap-window-photo');  // Поолучил Попап Окно.
 
@@ -48,7 +68,8 @@ window.onload = function () {
 
     const popapCloseBtn = document.querySelector('.popap__close-btn');  // Получил кнопку закрытия Попап Окна.
 
-    const popapActiveBtn = document.querySelectorAll('.wrapper__photo svg'); // Получил Кнопку лупу для активации Попап Окна.
+    const popapActiveBtn = document.querySelectorAll('.wrapper__photo svg'); // Получил Кнопку лупу для активации Попап Окно
+
 
 
     //Активирую Попап Окно 
@@ -86,7 +107,10 @@ window.onload = function () {
         });
     }
 
-    // Прокрутка до нужно секции при нажатии на пункт мобильного меню
+
+   
+
+    // Прокрутка до нужной секции при нажатии на пункт мобильного меню
 
     itemMobileMeu.forEach((item) => {
 
@@ -106,22 +130,24 @@ window.onload = function () {
 
             body.classList.remove('disabled');
 
-            if(e.target.classList.contains('video')) {
-
-                window.scroll(0, sectionMain.clientHeight);
-
-            }
             if (e.target.classList.contains('home')) {
 
                 window.scroll(0, 0);
               
             }
-            // if (e.target.classList.contains('photo')) {
 
-            //     windowError.classList.add('active');
-            
+            if(e.target.classList.contains('video')) {
 
-            // }
+                window.scroll(0, sectionMain.clientHeight);
+
+            }
+          
+            if (e.target.classList.contains('photo')) {
+
+                window.scroll(0, sectionMain.clientHeight + sectionVideo.clientHeight);
+              
+            }
+          
 
             // if (e.target.classList.contains('home')) {
 
@@ -141,15 +167,47 @@ window.onload = function () {
 
 
 
-    window.addEventListener('click', (e) => {
 
-        console.log(e.target);
-    });
-    
+  
 
-    // Акивация кнопки на вверх
+
 
     window.addEventListener('scroll', () => {
+
+        if (window.scrollY == 0) {
+
+            itemMobileMeu.forEach((element) => {
+                
+        
+                element.classList.remove('active');
+
+                for(let i=0; i < itemMobileMeu.length; i++) {
+
+                    itemMobileMeu[0].classList.add('active');
+                }
+                
+            });
+
+            headerFixed.classList.remove('active');
+
+            header.classList.add('active');
+        }
+
+        if(window.scrollY < 500 ){
+
+            mainArrowUp.classList.remove('active');
+
+        }
+
+        if(window.scrollY < sectionMain.clientHeight ) {
+
+            headerFixed.classList.remove('active');
+
+            header.classList.add('active');
+        }
+
+        // Акивация кнопки на вверх.
+
 
         if(window.scrollY > sectionMain.clientHeight - 10) {
 
@@ -165,100 +223,99 @@ window.onload = function () {
                 itemMobileMeu[1].classList.add('active');
             }
 
-        
-        }
+            itemMobileMeu.forEach((elem) => {
 
-        if(window.scrollY < 500 ){
-
-            mainArrowUp.classList.remove('active');
-
-        }
-
-        if(window.scrollY < sectionMain.clientHeight ) {
-
-            headerFixed.classList.remove('active');
-
-            header.classList.add('active');
-        }
-        
-        if (window.scrollY == 0) {
-
-            itemMobileMeu.forEach((element) => {
+                elem.classList.remove('active');
                 
-                
+                itemMobileMeu.forEach((item) => {
 
-                element.classList.remove('active');
+                    if(item.classList.contains('video')) {
 
-                for(let i=0; i < itemMobileMeu.length; i++) {
+                        item.classList.add('active');
 
-                    itemMobileMeu[0].classList.add('active');
-                }
-                
-            });
-
-            headerFixed.classList.remove('active');
-
-            header.classList.add('active');
-        }
-
-        if(window.scrollY > sectionVideo.clientHeight) {
-
-            itemDesctopMenuFixed.forEach((item) => {
-
-
-                item.classList.remove('active');
-
-                itemDesctopMenuFixed.forEach((elem) => {
-
-                    if(elem.className == 'gallary'){
-                       
-                        
-                        console.log("dfdfdfdfdfd");
-                       
                     }
-                    
-                    
-                
+
+
                 });
 
-
-                
             });
 
-           
+
+
+            itemDesctopMenuFixed.forEach((elem) => {
+
+      
+
+                elem.classList.remove('active');
+        
+                
+        
+                itemDesctopMenuFixed.forEach((item) => {
+        
+                    if(item.classList.contains('video')) {
+        
+                        item.classList.add('active');
+                    } else {
+        
+                        item.classList.remove('active');
+                        
+                    }
+        
+                });
+        
+        
+            });
+
+        
         }
+
+        if(window.scrollY > sectionMain.clientHeight + sectionVideo.clientHeight - 100) {
+
+            itemMobileMeu.forEach((elem) => {
+
+                elem.classList.remove('active');
+                
+                itemMobileMeu.forEach((item) => {
+
+                    if(item.classList.contains('photo')) {
+
+                        item.classList.add('active');
+
+                    }
+
+
+                });
+
+            });
+
+            itemDesctopMenuFixed.forEach((elem) => {
+
+                elem.classList.remove('active');
+        
+            
+                itemDesctopMenuFixed.forEach((item) => {
+        
+                    if(item.classList.contains('gallary')) {
+        
+                        item.classList.add('active');
+                    } else {
+        
+                        item.classList.remove('active');
+                        
+                    }
+        
+                });
+        
+        
+            });
+        }
+
+     
+
+    
     });
 
-    // console.log(sectionMain.clientHeight);
 
-
-    // Переключение активности у ссылок мобильного меню
-
-        // linkMobileMeu.forEach((item) => {
-
-        //     item.addEventListener('click', (e)=> {
-
-        //         linkMobileMeu.forEach((item) =>  {
-
-        //             item.classList.remove('active');
-        //         });
-
-        //         itemMobileMeu.forEach((item) => {
-
-        //             item.classList.remove('active');
-        //         });
-
-        //         e.target.classList.add('active');
-
-
-        //         body.classList = '';
-
-        //         burgerMenu.classList.remove('active');
-
-        //         btnBurger.classList.add('active');
-        //     });
-        
-        // });
 
     // Установил окно предупреждения "Страница находится в разработке" по клику на социальную иконку
 
@@ -337,5 +394,25 @@ window.onload = function () {
        
     // });
 
+
+
+    var swiper = new Swiper(".mySwiper", {
+        effect: "coverflow",
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: "auto",
+        coverflowEffect: {
+          rotate: 20,
+          stretch: 0,
+          depth: 200,
+          modifier: 1,
+          slideShadows: true,
+        },
+
+        loop: true,
+        // pagination: {
+        //   el: ".swiper-pagination",
+        // },
+      });
 
 };

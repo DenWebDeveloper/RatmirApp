@@ -7,6 +7,8 @@
     
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/fonts.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/animation.css">
     <link rel="stylesheet" href="./css/adaptive.css">
@@ -33,23 +35,7 @@
             </div>
         </div>
 
-        <div class="wrapper__arrow-up ">
-
-            <a href="#main-section" class="arrow-up">
-
-                <svg class="main__arrow-up" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                width="306px" height="306px" viewBox="0 0 306 306" style="enable-background:new 0 0 306 306;" xml:space="preserve">
-                    <g>
-                        <g id="expand-more">
-                            <polygon points="270.3,58.65 153,175.95 35.7,58.65 0,94.35 153,247.35 306,94.35"/>
-                        </g>
-
-                    </g>
-                 </svg>
-            </a>
-            
-
-        </div>
+   
 
         <header class="header active">
 
@@ -58,7 +44,7 @@
                 <li class="item__desctop-menu main item__desctop-menu-active"><a href="#main-section" class="link__desctop-menu link__desctop-menu-active">Главная</a></li>
                 <li class="item__desctop-menu video"><a href="#video" class="link__desctop-menu">Видео</a></li>
                 <li class="item__desctop-menu gallary"><a href="#photo-gallary" class="link__desctop-menu">Галерея</a></li>
-                <li class="item__desctop-menu audio"><a href="#audio-player" class="link__desctop-menu">Аудио</a></li>
+                <!-- <li class="item__desctop-menu audio"><a href="#audio-player" class="link__desctop-menu">Аудио</a></li> -->
     
             </ul>
 
@@ -68,13 +54,13 @@
 
             <ul class="list__desctop-menu-fixed">
     
-                <li class="item__desctop-menu-fixed main active"><a href="#main-section" class="link__desctop-menu-fixed ">Главная</a></li>
+                <li class="item__desctop-menu-fixed main active"><a href="#main-section" class="link__desctop-menu-fixed">Главная</a></li>
 
                 <li class="item__desctop-menu-fixed video"><a href="#video" class="link__desctop-menu-fixed ">Видео</a></li>
 
                 <li class="item__desctop-menu-fixed gallary"><a href="#photo-gallary" class="link__desctop-menu-fixed">Галерея</a></li>
                 
-                <li class="item__desctop-menu-fixed audio"><a href="#audio-player" class="link__desctop-menu-fixed">Аудио</a></li>
+                <!-- <li class="item__desctop-menu-fixed audio"><a href="#audio-player" class="link__desctop-menu-fixed">Аудио</a></li> -->
     
             </ul>
 
@@ -117,8 +103,8 @@
             <ul class="mobile-menu">
                 <li class="item__mobile-menu home  active">home</li>
                 <li class="item__mobile-menu video">video</li>
-                <!-- <li class="item__mobile-menu photo">photo</li>
-                <li class="item__mobile-menu music">music</li> -->
+                <li class="item__mobile-menu photo">photo</li>
+                <!-- <li class="item__mobile-menu music">music</li> -->
             </ul>
 
 
@@ -207,6 +193,43 @@
             <p class="main__sub-title">Лучшие песни!</p>
 
         </div>
+
+
+        <div class="wrapper__arrow-up ">
+
+            <a href="#main-section" class="arrow-up">
+
+                <svg class="main__arrow-up" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                width="306px" height="306px" viewBox="0 0 306 306" style="enable-background:new 0 0 306 306;" xml:space="preserve">
+                    <g>
+                        <g id="expand-more">
+                            <polygon points="270.3,58.65 153,175.95 35.7,58.65 0,94.35 153,247.35 306,94.35"/>
+                        </g>
+
+                    </g>
+                 </svg>
+            </a>
+            
+
+        </div>
+
+        <div class="wrapper__arrow-down ">
+
+            <a href="#video" class="arrow-up">
+
+                <svg class="main__arrow-down" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                width="306px" height="306px" viewBox="0 0 306 306" style="enable-background:new 0 0 306 306;" xml:space="preserve">
+                    <g>
+                        <g id="expand-more">
+                            <polygon points="270.3,58.65 153,175.95 35.7,58.65 0,94.35 153,247.35 306,94.35"/>
+                        </g>
+
+                    </g>
+                 </svg>
+            </a>
+            
+
+        </div>
         
 
     </section>
@@ -215,7 +238,12 @@
 
     <section class="section  sec-2 section-video" id="video">
 
-        <h2 class="sec__main-title">Video Gallery</h2>
+        <div class="wrapper__sec-main-title">
+
+          <h2 class="sec__main-title">Video Gallery</h2>
+
+        </div>
+
 
         <div class="container container__sec-2">
 
@@ -551,7 +579,8 @@
     <!-- SECTION PHOTO GALLERY -->
 
     <section class="section  sec-3 section-photo" id="photo-gallary">
-    <h2 class="sec__main-title section__photo-main-title">Photo Gallery</h2>
+
+         <h2 class="sec__main-title section__photo-main-title">Photo Gallery</h2>
 
 
         <div class="wrapper__popap-window-photo ">
@@ -566,17 +595,17 @@
 
         <!-- <p class="sub-title">Ратмир Алесандров</p> -->
 
-        <div class="container container__section-photo">
+        <div class="container container__section-photo ">
 
             <div class="wrapper__arrow wrap-arrow-1 ">
-                <svg  class="arrow-right active" id="blue_copy" style="enable-background:new 0 0 100 100;"
- version="1.1" viewBox="0 0 100 100" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
- <g id="Layer_8_copy_4_1_">
- <path d="M41.762,27.26v8.294c0,0.571,0.305,1.1,0.8,1.385l20.212,11.669c1.066,0.616,1.066,2.155,0,2.771L42.562,63.048   c-0.495,0.286-0.8,0.814-0.8,1.385v8.294c0,1.231,1.333,2.001,2.399,1.385l39.375-22.733c1.066-0.616,1.066-2.155,0-2.771   L44.161,25.875C43.095,25.259,41.762,26.029,41.762,27.26z"/><path d="M83.537,48.608L44.161,25.875c-0.193-0.112-0.395-0.164-0.597-0.19l37.972,21.923c1.066,0.616,1.066,2.155,0,2.771   L42.161,73.112c-0.1,0.058-0.205,0.092-0.308,0.126c0.308,0.914,1.401,1.398,2.308,0.874l39.375-22.733   C84.603,50.763,84.603,49.224,83.537,48.608z"/><path d="M41.762,27.26v8.294c0,0.571,0.305,1.1,0.8,1.385l20.212,11.669   c1.066,0.616,1.066,2.155,0,2.771L42.562,63.048c-0.495,0.286-0.8,0.814-0.8,1.385v8.294c0,1.231,1.333,2.001,2.399,1.385   l39.375-22.733c1.066-0.616,1.066-2.155,0-2.771L44.161,25.875C43.095,25.259,41.762,26.029,41.762,27.26z" style="fill:none;stroke:#000000;stroke-miterlimit:10;"/><path d="M14.664,27.273v8.294c0,0.571,0.305,1.1,0.8,1.385l20.212,11.669c1.066,0.616,1.066,2.155,0,2.771L15.464,63.061   c-0.495,0.286-0.8,0.814-0.8,1.385v8.294c0,1.231,1.333,2.001,2.399,1.385l39.375-22.733c1.066-0.616,1.066-2.155,0-2.771   L17.063,25.888C15.997,25.272,14.664,26.042,14.664,27.273z"/>
- <path d="M56.438,48.621L17.063,25.888c-0.193-0.112-0.395-0.164-0.597-0.19l37.972,21.923c1.066,0.616,1.066,2.155,0,2.771   L15.063,73.125c-0.1,0.058-0.205,0.092-0.308,0.126c0.308,0.914,1.401,1.398,2.308,0.874l39.375-22.733   C57.505,50.776,57.505,49.237,56.438,48.621z"/>
- <path d="M14.664,27.273v8.294c0,0.571,0.305,1.1,0.8,1.385l20.212,11.669   c1.066,0.616,1.066,2.155,0,2.771L15.464,63.061c-0.495,0.286-0.8,0.814-0.8,1.385v8.294c0,1.231,1.333,2.001,2.399,1.385   l39.375-22.733c1.066-0.616,1.066-2.155,0-2.771L17.063,25.888C15.997,25.272,14.664,26.042,14.664,27.273z" style="fill:none;stroke:#000000;stroke-miterlimit:10;"/>
- </g>
- </svg>
+                 <svg  class="arrow-right active" id="blue_copy" style="enable-background:new 0 0 100 100;"
+                    version="1.1" viewBox="0 0 100 100" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <g id="Layer_8_copy_4_1_">
+                    <path d="M41.762,27.26v8.294c0,0.571,0.305,1.1,0.8,1.385l20.212,11.669c1.066,0.616,1.066,2.155,0,2.771L42.562,63.048   c-0.495,0.286-0.8,0.814-0.8,1.385v8.294c0,1.231,1.333,2.001,2.399,1.385l39.375-22.733c1.066-0.616,1.066-2.155,0-2.771   L44.161,25.875C43.095,25.259,41.762,26.029,41.762,27.26z"/><path d="M83.537,48.608L44.161,25.875c-0.193-0.112-0.395-0.164-0.597-0.19l37.972,21.923c1.066,0.616,1.066,2.155,0,2.771   L42.161,73.112c-0.1,0.058-0.205,0.092-0.308,0.126c0.308,0.914,1.401,1.398,2.308,0.874l39.375-22.733   C84.603,50.763,84.603,49.224,83.537,48.608z"/><path d="M41.762,27.26v8.294c0,0.571,0.305,1.1,0.8,1.385l20.212,11.669   c1.066,0.616,1.066,2.155,0,2.771L42.562,63.048c-0.495,0.286-0.8,0.814-0.8,1.385v8.294c0,1.231,1.333,2.001,2.399,1.385   l39.375-22.733c1.066-0.616,1.066-2.155,0-2.771L44.161,25.875C43.095,25.259,41.762,26.029,41.762,27.26z" style="fill:none;stroke:#000000;stroke-miterlimit:10;"/><path d="M14.664,27.273v8.294c0,0.571,0.305,1.1,0.8,1.385l20.212,11.669c1.066,0.616,1.066,2.155,0,2.771L15.464,63.061   c-0.495,0.286-0.8,0.814-0.8,1.385v8.294c0,1.231,1.333,2.001,2.399,1.385l39.375-22.733c1.066-0.616,1.066-2.155,0-2.771   L17.063,25.888C15.997,25.272,14.664,26.042,14.664,27.273z"/>
+                    <path d="M56.438,48.621L17.063,25.888c-0.193-0.112-0.395-0.164-0.597-0.19l37.972,21.923c1.066,0.616,1.066,2.155,0,2.771   L15.063,73.125c-0.1,0.058-0.205,0.092-0.308,0.126c0.308,0.914,1.401,1.398,2.308,0.874l39.375-22.733   C57.505,50.776,57.505,49.237,56.438,48.621z"/>
+                    <path d="M14.664,27.273v8.294c0,0.571,0.305,1.1,0.8,1.385l20.212,11.669   c1.066,0.616,1.066,2.155,0,2.771L15.464,63.061c-0.495,0.286-0.8,0.814-0.8,1.385v8.294c0,1.231,1.333,2.001,2.399,1.385   l39.375-22.733c1.066-0.616,1.066-2.155,0-2.771L17.063,25.888C15.997,25.272,14.664,26.042,14.664,27.273z" style="fill:none;stroke:#000000;stroke-miterlimit:10;"/>
+                    </g>
+                </svg>
 
 
             </div>
@@ -593,7 +622,7 @@
             </div>
 
 
-            <div class="wrapper__photo-items">
+            <div class="wrapper__photo-items-desctop">
 
                 <div class="item__photo item__photo-1">
 
@@ -832,77 +861,88 @@
                     </div>
 
                 </div>
+            </div>
 
-                <!-- <div class="item__photo item__photo-13">
+            <div class="wrapper__photo-items-mobile gallery swiper mySwiper">
 
-                    <div class="wrapper__description-photo">
+                <div class="item__photo-mobile item__photo-1-mobile gallery_list swiper-wrapper">
 
-                        <p class="description__photo"></p>
-        
-                    </div>
-        
-                    <div class="wrapper__photo bg">
-                       
-                        <div class="item-photo-shadow"></div>
-                        <svg enable-background="new 0 0 32 32" id="Glyph" version="1.1" 
-                        viewBox="0 0 32 32" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" 
-                        xmlns:xlink="http://www.w3.org/1999/xlink">
-                        <path d="M27.414,24.586l-5.077-5.077C23.386,17.928,24,16.035,24,14c0-5.514-4.486-10-10-10S4,8.486,4,14  s4.486,10,10,10c2.035,0,3.928-0.614,5.509-1.663l5.077,5.077c0.78,0.781,2.048,0.781,2.828,0  C28.195,26.633,28.195,25.367,27.414,24.586z M7,14c0-3.86,3.14-7,7-7s7,3.14,7,7s-3.14,7-7,7S7,17.86,7,14z" id="XMLID_227_"/><path d="M19,14c0,0.552-0.448,1-1,1h-3v3c0,0.552-0.448,1-1,1s-1-0.448-1-1v-3h-3c-0.552,0-1-0.448-1-1s0.448-1,1-1  h3v-3c0-0.552,0.448-1,1-1s1,0.448,1,1v3h3C18.552,13,19,13.448,19,14z" id="XMLID_230_"/></svg>
+                    <div class="gallery_item swiper-slide">
 
-                        <img src="./images/Заглушка__img.jpg" alt="Фото">
-                        
-                    </div>
+                        <img src="./images/section-photo/Slider__Swiper/1.jpg" alt="Фото-1">
 
-                </div> -->
+                        <div class="wrapper__description-photo-mobile text">
 
-                <!-- <div class="item__photo item__photo-14">
+                            <h3 class="description__photo-mobile title">Название фотографии</h3>
+                            <p>Описание фотографии</p>
+    
+                            <!-- <a href="#">Посмотреть</a> -->
+            
+                        </div>
 
-                    <div class="wrapper__description-photo">
-
-                        <p class="description__photo"></p>
-        
-                    </div>
-        
-                    <div class="wrapper__photo bg">
-                       
-                        <div class="item-photo-shadow"></div>
-                        <svg enable-background="new 0 0 32 32" id="Glyph" version="1.1" 
-                        viewBox="0 0 32 32" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" 
-                        xmlns:xlink="http://www.w3.org/1999/xlink">
-                        <path d="M27.414,24.586l-5.077-5.077C23.386,17.928,24,16.035,24,14c0-5.514-4.486-10-10-10S4,8.486,4,14  s4.486,10,10,10c2.035,0,3.928-0.614,5.509-1.663l5.077,5.077c0.78,0.781,2.048,0.781,2.828,0  C28.195,26.633,28.195,25.367,27.414,24.586z M7,14c0-3.86,3.14-7,7-7s7,3.14,7,7s-3.14,7-7,7S7,17.86,7,14z" id="XMLID_227_"/><path d="M19,14c0,0.552-0.448,1-1,1h-3v3c0,0.552-0.448,1-1,1s-1-0.448-1-1v-3h-3c-0.552,0-1-0.448-1-1s0.448-1,1-1  h3v-3c0-0.552,0.448-1,1-1s1,0.448,1,1v3h3C18.552,13,19,13.448,19,14z" id="XMLID_230_"/></svg>
-
-                        <img src="./images/Заглушка__img.jpg" alt="Фото">
-                        
                     </div>
 
-                </div> -->
-<!-- 
-                <div class="item__photo item__photo-15">
+                    <div class="gallery_item swiper-slide">
 
-                    <div class="wrapper__description-photo">
+                        <img src="./images/section-photo/Slider__Swiper/2.jpg" alt="Фото-2">
 
-                        <p class="description__photo"></p>
-        
-                    </div>
-        
-                    <div class="wrapper__photo bg">
-                       
-                        <div class="item-photo-shadow"></div>
-                        <svg enable-background="new 0 0 32 32" id="Glyph" version="1.1" 
-                        viewBox="0 0 32 32" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" 
-                        xmlns:xlink="http://www.w3.org/1999/xlink">
-                        <path d="M27.414,24.586l-5.077-5.077C23.386,17.928,24,16.035,24,14c0-5.514-4.486-10-10-10S4,8.486,4,14  s4.486,10,10,10c2.035,0,3.928-0.614,5.509-1.663l5.077,5.077c0.78,0.781,2.048,0.781,2.828,0  C28.195,26.633,28.195,25.367,27.414,24.586z M7,14c0-3.86,3.14-7,7-7s7,3.14,7,7s-3.14,7-7,7S7,17.86,7,14z" id="XMLID_227_"/><path d="M19,14c0,0.552-0.448,1-1,1h-3v3c0,0.552-0.448,1-1,1s-1-0.448-1-1v-3h-3c-0.552,0-1-0.448-1-1s0.448-1,1-1  h3v-3c0-0.552,0.448-1,1-1s1,0.448,1,1v3h3C18.552,13,19,13.448,19,14z" id="XMLID_230_"/></svg>
 
-                        <img src="./images/Заглушка__img.jpg" alt="Фото">
-                        
+                        <div class="wrapper__description-photo-mobile text">
+
+                            <h3 class="description__photo-mobile title">Название фотографии</h3>
+                            <p>Описание фотографии</p>
+    
+                            <!-- <a href="#">Посмотреть</a> -->
+            
+                        </div>
+
                     </div>
 
-                </div> -->
 
+                    <div class="gallery_item swiper-slide">
+
+                        <img src="./images/section-photo/Slider__Swiper/3.jpg" alt="Фото-3">
+
+
+
+                        <div class="wrapper__description-photo-mobile text">
+
+                            <h3 class="description__photo-mobile title">Название фотографии</h3>
+                            <p>Описание фотографии</p>
+    
+                            <!-- <a href="#">Посмотреть</a> -->
+            
+                        </div>
+
+                    </div>
+
+                    <div class="gallery_item swiper-slide">
+
+                        <img src="./images/BG-0.1.jpg" alt="Фото-2">
+
+
+                        <div class="wrapper__description-photo-mobile text">
+
+                            <h3 class="description__photo-mobile title">Название фотографии</h3>
+                            <p>Описание фотографии</p>
+    
+                            <!-- <a href="#">Посмотреть</a> -->
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="swiper-pagination"></div>
 
             </div>
 
         </div>
+    </section>
+
+    <section class="section-new">
+
+        <h2 class="section-new__title">Ожидается добавление Контента</h2>
     </section>
 
 
@@ -931,7 +971,14 @@
         </div>
     </footer>
 
-    <script src="./js/variables.js"></script>
-    <script src="js/main.js"></script>    
+
+
+
+
+
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+ 
+    <script src="js/main.js"></script>  
+
 </body>
 </html>
