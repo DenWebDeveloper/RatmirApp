@@ -157,6 +157,7 @@
     opacity: 0;
 
     transition: .5s;
+
    
 }
 
@@ -172,7 +173,7 @@
     top: 50%;
     right: 10px;
     transform: translate(100%, -50%);
-    /* background: #FF0000;  */
+   
     opacity: 0;
 
     transition: all .5s;
@@ -196,6 +197,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: start;
+
 
 }
 
@@ -490,17 +492,6 @@
 
 }
 
-.list__desctop-menu {
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: start;
-
-}
-
-
-
 .item__desctop-menu {
 
     position: relative;
@@ -513,6 +504,15 @@
     height: 50px;
  
     margin: 20px 0 50px 5px;
+
+}
+
+.header .list__desctop-menu {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
 
 }
 
@@ -560,15 +560,19 @@
 
     color: rgb(130, 128, 128);
     opacity: 1;
+    cursor: pointer;
 
 }
 
 
-.item__desctop-menu-active .item__desctop-menu::before,
+
 .item__desctop-menu-active .link__desctop-menu-active {
 
     opacity: 1;
     color: rgb(130, 128, 128);
+
+    /* color: rgb(166, 0, 0); */
+
     font-size: 25px;
 
 
@@ -586,6 +590,8 @@
 .link__desctop-menu:hover {
 
     font-size: 25px;
+    /* cursor: pointer; */
+    
 
 }
 
@@ -943,22 +949,54 @@
     position: relative;
     
     width: 100%;
- 
-    /* height: 340px; */
-
     height: max-content;
-    
-    /* margin-bottom: 10px; */
+
+    display: flex;
+    flex-direction: column;
     
 }
 
-.item-video iframe {
+.item-video video {
+
+    margin-bottom: 5px;
+}
+
+.wrapper__video-description {
 
     width: 100%;
-    /* height: 100%; */
+    height: max-content;
+
+    padding: 10px 15px;
+    background: rgba(0, 0, 0, 0.757);
+
+    border-radius: 4px;
+
 
 }
 
+.item-video .video-description {
+
+   
+    text-align: center;
+    color: rgb(255, 255, 255);
+
+    font-weight: bold;
+
+}
+
+.item-video .artists {
+    font-size: 20px;
+
+    margin-bottom: 8px;
+
+
+}
+
+.item-video .name-songs {
+    font-size: 16px;
+
+
+}
 .wrapper__lock-video {
 
     position: absolute;
@@ -1134,7 +1172,7 @@
 
 .wrapper__popap-window-photo {
 
-    position: absolute;
+    position: Fixed;
     top: 0;
     left: 0;
 
@@ -1143,16 +1181,24 @@
 
     background: #000000b6;
 
-    /* opacity: 1; */
-    
-    display: none;
+    opacity: 0;
+
+    z-index: -1000;
 
 
-    z-index: 10000;
+    transition: 0s;
+ 
 }
 
 .wrapper__popap-window-photo.active {
-    display: block;
+   
+
+    opacity: 1;
+
+    z-index: 10000;
+
+    transition: .5s;
+
 }
 
 .popap__close-btn {
@@ -1163,12 +1209,8 @@
     width: 35px;
     height: 35px;
 
-    
-
     font-size: 30px;
     transform: scale(1);
-
-    /* background: red; */
 
     display: flex;
     align-items: center;
@@ -1185,6 +1227,7 @@
 }
 
 .wrapper__popap-window-for-img {
+
     position:absolute;
     top: 50%;
     left: 50%;
@@ -1206,9 +1249,6 @@
     
 
     background: rgba(84, 151, 209, 0.29);
-
-    
-
 
 }
 
