@@ -72,21 +72,60 @@ window.onload = function(){
 
 
 
+
+
+    function disableScroll() {
+
+        let pagePosition = window.scrollY;
+
+
+        body.classList.add('disabled-scroll');
+        body.dataset.position = pagePosition;
+
+        console.log(body.dataset.position);
+
+        body.style.top = -pagePosition + 'px';
+
+    }
+
+
+    function enableScroll() {
+
+        let pagePosition = parseInt(body.dataset.position, 10);
+
+        body.classList.remove('disabled-scroll');
+
+
+        body.style.top = 'auto';
+
+        body.classList.remove('disabled-scroll');
+        window.scroll({
+
+            top: pagePosition,
+            left: 0,
+        });
+
+        body.removeAttribute('data-position');
+    
+
+    }
+
+
     //Активирую Попап Окно 
 
     popapActiveBtn.forEach((item) => {
 
         item.addEventListener('click', (e) => {
 
-
             popapWindow.classList.add('active');
-
+            disableScroll();
 
         });
     });
 
     popapCloseBtn.addEventListener('click', () => {
         popapWindow.classList.remove('active');
+        enableScroll();
 
     });
 
@@ -112,9 +151,12 @@ window.onload = function(){
 
     // Прокрутка до нужной секции при нажатии на пункт мобильного меню
 
+
     itemMobileMeu.forEach((item) => {
 
         item.addEventListener('click', (e) => {
+
+
 
             itemMobileMeu.forEach((element) => {
                 
@@ -130,7 +172,13 @@ window.onload = function(){
 
             body.classList.remove('disabled');
 
+           enableScroll();
+
+
+
+
             if (e.target.classList.contains('home')) {
+
 
                 window.scroll(0, 0);
               
@@ -147,30 +195,17 @@ window.onload = function(){
                 window.scroll(0, sectionMain.clientHeight + sectionVideo.clientHeight);
               
             }
-          
 
-            // if (e.target.classList.contains('home')) {
-
-            //     window.scroll(0, 0);
-              
-            // }
-
-            // body.classList.add('disabled');
+            console.log(window.scrollY);
 
 
         });
 
 
+
     });
 
-
-
-
-
-
-  
-
-
+    // Функция при Скроле окна браузера
 
     window.addEventListener('scroll', () => {
 
@@ -209,7 +244,7 @@ window.onload = function(){
         // Акивация кнопки на вверх.
 
 
-        if(window.scrollY > sectionMain.clientHeight - 10) {
+        if(window.scrollY > sectionMain.clientHeight - 50) {
 
             header.classList.remove('active');
 
@@ -217,11 +252,11 @@ window.onload = function(){
 
             mainArrowUp.classList.add('active');
             
-            for(let i = 0;i < itemMobileMeu.length; i++) {
-                itemMobileMeu[0].classList.remove('active');
+            // for(let i = 0;i < itemMobileMeu.length; i++) {
+            //     itemMobileMeu[0].classList.remove('active');
 
-                itemMobileMeu[1].classList.add('active');
-            }
+            //     itemMobileMeu[1].classList.add('active');
+            // }
 
             itemMobileMeu.forEach((elem) => {
 
@@ -336,49 +371,16 @@ window.onload = function(){
     });
 
 
-
-
-
-    // Расскрывает мобильное меню
-
-
-    // function disabled () {
-
-    //     let pagePosition = window.scrollY;
- 
-    //      btnBurger.classList.remove('active');
-    //      burgerMenu.classList.add('active');
-    //      btnClouse.classList.add('active');
-       
-    //      body.classList.add('disabled');
-    //      body.dataset.position = pagePosition;
-    //      body.style.top = -pagePosition + 'px';
-    // }
-
-
-
-
-    // Закрывает мобильное меню
-    
-    // function activate() {
-
-    //     let pagePosition = parseInt(body.dataset.position, 10);
-    //     body.style.top = 'auto';
-
-    //     btnClouse.classList.remove('active');
-    //     burgerMenu.classList.remove('active');
-    //     body.classList.remove('disabled');
-    //     window.scroll({top: pagePosition, left: 0});
-    //     body.removeAttribute('data-position');
-    //     btnBurger.classList.add('active');
-    // }
-
-
     btnBurger.addEventListener('click', () => {
-        btnBurger.classList.remove('active');
+        // btnBurger.classList.remove('active');
         burgerMenu.classList.add('active');
         btnClouse.classList.add('active');
-           
+
+        body.classList.add('disabled');
+
+        // disableScroll();
+
+
     });
 
     btnClouse.addEventListener('click', () => {
@@ -386,13 +388,13 @@ window.onload = function(){
         burgerMenu.classList.remove('active');
         btnBurger.classList.add('active');
 
-    });
+        body.classList.remove('disabled');
 
-    // mainBtnUp.addEventListener('click', () => {
+        // enableScroll();
 
-    //     window.scrollTo(0, 0);
        
-    // });
+
+    });
 
 
 
