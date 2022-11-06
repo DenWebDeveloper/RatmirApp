@@ -415,6 +415,6 @@ window.onload = function(){
         // pagination: {
         //   el: ".swiper-pagination",
         // },
-      });
+    });
 
 };

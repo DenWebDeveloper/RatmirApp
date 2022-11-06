@@ -1,9 +1,5 @@
 
-
-
-/* Ширина Экрана 1240px */
-
-@media (max-width: 1350px){
+@media (max-width: 1650px){
 
     .wrapper__photo-items-desctop {
 
@@ -33,7 +29,7 @@
 
 }
 
-
+/* Ширина Экрана 1240px */
 
 @media (max-width: 1240px){
 
@@ -49,10 +45,6 @@
         background-size: cover;
        
     }
-
-  
-
-  
 
     .section-2 {
 
