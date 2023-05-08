@@ -585,13 +585,16 @@
     }
 
     .section__audio .master_play .vol {
+
         width: 80%;
-        left: 10px;
+
+        left: 20px;
     }
 
+  
     .section__audio .master_play .vol .bi {
 
-        left: -40px;
+        left: -50px;
     }
 
 }
