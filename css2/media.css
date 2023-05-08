@@ -327,6 +327,20 @@
         margin: 20px auto 0px;
         
     }
+
+    
+    .section__audio .master_play .vol {
+
+        width: 80%;
+
+        left: 20px;
+    }
+
+  
+    .section__audio .master_play .vol .bi {
+
+        left: -50px;
+    }
 }
 
 @media( max-width: 375px){
@@ -386,6 +400,20 @@
     .bi {
 
         font-size: 25px;
+    }
+
+    
+    .section__audio .master_play .vol {
+
+        width: 80%;
+
+        left: 20px;
+    }
+
+  
+    .section__audio .master_play .vol .bi {
+
+        left: -50px;
     }
 
     
@@ -459,6 +487,20 @@
     .section__audio .master_play .vol .bi {
         margin-left: 10px;
         font-size: 30px;
+    }
+
+    
+    .section__audio .master_play .vol {
+
+        width: 80%;
+
+        left: 20px;
+    }
+
+  
+    .section__audio .master_play .vol .bi {
+
+        left: -50px;
     }
 
  
