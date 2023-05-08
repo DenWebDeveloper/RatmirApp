@@ -4,8 +4,6 @@ body {
 }
 
 
-
-
 /* ***************  SECTION - 1 MAIN  *************** */
 .wrapper__arrow-up {
 
@@ -21,7 +19,7 @@ body {
 
     display: none;
     transition: all .5s;
-    /* animation: animation-arrow 1.5s infinite; */
+    animation: animation-arrow 1.5s infinite;
 }
 
 .wrapper__arrow-up svg {
@@ -30,22 +28,7 @@ body {
     height: 100%;
 }
 
-@keyframes animation-arrow {
-    0% {
-    transform: scale(1);
 
-    }
-
-    50% {
-        transform: scale(1.2);
-    
-    }
-
-    100% {
-        transform: scale(1);
-    
-    }
-}
 
 .wrapper__arrow-up:hover {
 
@@ -85,29 +68,6 @@ body {
     animation: move__arrow-down 2s ease-in-out infinite;
 
 }
-
-@keyframes move__arrow-down {
-
-    0% {
-
-    transform: translateY(0px);
-
-    }
-
-    50% {
-        
-    transform: translateY(20px);
-
-    }
-
-    100% {
-        
-    transform: translateY(0px);
-
-    }
-}
-
-
 
 .wrapper__arrow-down .main__arrow-down {
 
@@ -372,7 +332,7 @@ body {
     right: 0px;
     transform: translateX(100%);
 
-    Z-index: 100;
+    Z-index: 10;
     width: 100%;
     height: 100%;
     /* background: rgb(141, 15, 15); */
@@ -402,6 +362,8 @@ body {
     top: 15px;
     left: -40px;
     display: none;
+
+    z-index: 1000000000;
 
    
 
@@ -436,8 +398,6 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
-    /* background: #000; */
 
 }
 
@@ -579,11 +539,7 @@ body {
 
     opacity: 1;
     color: rgb(130, 128, 128);
-
-    /* color: rgb(166, 0, 0); */
-
     font-size: 25px;
-
 
 }
 
@@ -598,9 +554,7 @@ body {
 
 .link__desctop-menu:hover {
 
-    font-size: 25px;
-    /* cursor: pointer; */
-    
+    font-size: 25px;  
 
 }
 
@@ -1179,14 +1133,16 @@ body {
 }
 
 .section-photo {
-    position: relative;
+    /* position: relative;
     width: 100%;
     height: 100vh;
 
     background: url('../images/section-photo/bg/bg-2.jpg');
     background-repeat: no-repeat;
     background-position: center;
-    background-size: cover;
+    background-size: cover; */
+
+    display: none;
 
 }
 

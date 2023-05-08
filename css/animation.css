@@ -1,21 +1,21 @@
 
 /* Анимация для стрелки в главном меню header главного экрана  */
-/* 
-@keyframes move {
-    0%{
-    transform: translateX(0px);
+
+
+@keyframes move__arrow-down {
+     0%{
+    transform: translateY(0px);
 
     }
     50% {
-    transform: translateX(14px);
+    transform: translateY(14px);
 
 
     }
     100% {
-        transform: translateX(0px);
+        transform: translateY(0px);
     }
-} */
-
+}
 
 /* Анимация цвта для кнопки close в Window__error  */
 
@@ -35,5 +35,22 @@
    100% {
         fill: #fff;
         
+    }
+}
+
+@keyframes animation-arrow {
+    0% {
+    transform: scale(1);
+
+    }
+
+    50% {
+        transform: scale(1.1);
+    
+    }
+
+    100% {
+        transform: scale(1);
+    
     }
 }

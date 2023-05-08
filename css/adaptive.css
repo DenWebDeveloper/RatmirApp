@@ -29,6 +29,24 @@
 
 }
 
+
+@media (max-width: 1500px){
+
+    .menu-burger {
+
+        display: block;
+        opacity: 1;
+        background-color: rgba(0,0,0,0.9);
+    }
+
+    .header-fixed {
+
+        display: none;
+        opacity: 0;
+    }
+
+}
+
 /* Ширина Экрана 1240px */
 
 @media (max-width: 1240px){

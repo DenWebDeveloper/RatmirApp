@@ -1,0 +1,73 @@
+.grid {
+    display: grid;
+}
+
+/* Grid Rows */
+
+.g-row-1{
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+}
+
+.g-row-2{
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.g-row-3{
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.g-row-4{
+    grid-template-rows: repeat(4, 1fr);
+}
+
+.g-row-5{
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: repeat(5, 1fr);
+    
+}
+
+.g-row-6{
+    grid-template-rows: repeat(6, 1fr);
+
+}
+
+.g-row-7{
+    grid-template-rows: repeat(7, 1fr);
+
+}
+
+/* Grid Columns */
+
+.g-col-1{
+    grid-template-columns: 1fr;
+    
+}
+
+.g-col-2{
+    grid-template-columns: repeat(2, 1fr);
+    
+}
+
+.g-col-3{
+    grid-template-columns: repeat(3, 1fr) ;
+    
+}
+
+.g-col-4{
+    grid-template-columns: repeat(4, 1fr);
+    
+}
+
+.g-col-5{
+    grid-template-columns: repeat(5, 1fr);
+    
+}
+
+
+
+
+
+
+
